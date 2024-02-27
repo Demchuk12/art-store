@@ -1,0 +1,23 @@
+<div class="reviews-block container">
+  <div *ngIf="loading | async" class="spinner-wrapper">
+    <div class="spinner">
+    </div>
+    <p class="spinner-text">
+      Reviews loading... Please wait
+    </p>
+  </div>
+  <p class="font-title reviews-block__title">
+    Our customers says
+  </p>
+  <owl-carousel-o [options]="customOptions" *ngIf="loaded | async">
+    <ng-container *ngFor="let customer of customers$ | async">
+      <ng-template carouselSlide>
+        <div class="reviews-block__container">
+          <app-customers
+            [customer]="customer">
+          </app-customers>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>

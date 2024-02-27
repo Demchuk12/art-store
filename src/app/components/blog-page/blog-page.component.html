@@ -1,0 +1,145 @@
+<div class="blog container">
+  <div *ngIf="hasParams; else noParams">
+    <div *ngFor="let article of articles$ | async let i = index" [attr.data-index]="i">
+      <div *ngIf="i === 0">
+        <p class="font-text path">
+          <a routerLink="/">Homepage /</a>
+          <a routerLink="/blog-page"> Blog /</a>
+          {{article.blogCategory | titlecase}}
+        </p>
+        <p class="font-title-more-large blog__title">{{article.blogCategory | titlecase}}</p>
+      </div>
+    </div>
+  </div>
+  <ng-template #noParams>
+    <p class="font-text path">
+      <a routerLink="/">Homepage / </a> Blog /
+    </p>
+  </ng-template>
+  <div *ngIf="loading | async" class="spinner-wrapper">
+    <div class="spinner">
+    </div>
+    <p class="spinner-text">
+      Articles loading... Please wait
+    </p>
+  </div>
+  <div *ngIf="loaded | async" class="blog__big-articles">
+    <div class="blog__big-article" *ngFor="let bigArticle of articles$ | async let i = index" [attr.data-index]="i">
+      <div [@fadeIn] class="big-article-wrapper" *ngIf="i < 2"
+           [ngStyle]="{'background-image': 'url(' + bigArticle.img + ')'}">
+        <div class="big-article">
+        <span class="tag-green font-title-small">
+          {{bigArticle.tags[0]}}
+        </span>
+          <div>
+            <p class="font-title-medium">
+              {{bigArticle.title}}
+            </p>
+            <div class="font-text big-article-description">
+              <div class="big-article-details">
+                <img class="big-article-img-author" src="{{bigArticle.imgAuthor}}" alt="Author img">
+                <span class="big-article-author">{{bigArticle.author}}</span>
+                <span>{{bigArticle.date}}</span>
+              </div>
+              <a class="big-article-read-link"
+                 [routerLink]="['', 'blog-page', bigArticle.blogCategory, bigArticle.id]">
+                Read article
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="blog__main">
+    <aside class="blog__aside">
+      <p class="font-title blog__aside-title">
+        Archives
+      </p>
+      <ul class="font-text-large list">
+        <li class="list-item">
+          <a class="list-link" href="#">March 2020</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link" href="#">February 2020</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link" href="#">January 2020</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link" href="#">November 2019</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link" href="#">December 2019</a>
+        </li>
+      </ul>
+      <p class="font-title blog__aside-title">
+        Category
+      </p>
+      <div *ngIf="loadingCategory | async" class="spinner-wrapper">
+        <div class="spinner">
+        </div>
+        <p class="spinner-text">
+          Categories loading... Please wait
+        </p>
+      </div>
+      <div *ngIf="loadedCategory | async">
+        <ul class="font-text-large list">
+          <li class="list-item" *ngFor='let category of categories$ | async'>
+            <a class="blog__list-link" [routerLink]="['', 'blog-page', category.category | lowercase]">
+              {{category.category}}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p class="font-title blog__aside-title">Join our list</p>
+      <span class="font-text-large blog__aside-join">
+        Signup to be the first to hear about exclusive deals, special offers, recepies from our masters and others.
+      </span>
+      <div class="input blog__aside-join-input">
+        <input class="font-text-large blog__aside-input" placeholder="Your email address">
+        <button class="button blog__aside-join-btn">
+          Subscribe
+        </button>
+      </div>
+    </aside>
+    <section>
+      <div class="blog__articles">
+        <div [@fadeIn] *ngFor="let article of articles | paginate: config let i = index" [attr.data-index]="i">
+          <app-blog-article *ngIf="i >= 2"
+                            [article]="article">
+          </app-blog-article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <pagination-template #p="paginationApi" [id]="config.id" (pageChange)="onPageChange($event)">
+    <div class="pagination" *ngIf="p.pages.length > 1">
+      <div class="font-text pagination__pages">
+        <span class="pagination__pages-text">Page:</span>
+        <div class="pagination__page-number" *ngFor="let page of p.pages"
+             [class.current]="p.getCurrent() === page.value">
+          <span (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value">{{ page.label }}</span>
+          <div *ngIf="p.getCurrent() === page.value">
+            <span class="pagination__current-page">{{ page.label }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="pagination__next" [class.disabled]="p.isLastPage()">
+        <button class="button button-green pagination__next-btn"
+                *ngIf="!p.isLastPage()" (click)="p.next()">
+          Next Page
+          <img src="/assets/images/white-arrow.svg" alt="Arrow">
+        </button>
+      </div>
+      <div>
+        <span class="font-title-small tag-green">
+          {{articles.length}}
+        </span>
+        <span class="font-text count-text">
+          articles
+        </span>
+      </div>
+    </div>
+  </pagination-template>
+</div>

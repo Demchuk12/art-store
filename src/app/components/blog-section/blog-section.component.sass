@@ -1,0 +1,80 @@
+.blog-section
+  background-color: #FFFFFF
+  padding-top: 64px
+  padding-bottom: 64px
+
+.blog-section__header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 32px
+
+.blog-section__blog-btn
+  font-weight: 700
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border: none
+  background: none
+  cursor: pointer
+
+.blog-section__blog-btn-arrow
+  margin-left: 12px
+
+.blog-section__wrapper
+  width: 469px
+
+.blog-section__articles
+  display: flex
+
+.blog-section__list-articles
+  display: flex
+  flex-direction: column
+  margin-left: 32px
+
+.article
+  display: flex
+  justify-content: space-between
+
+.article__description
+  margin-top: 16px
+
+.article__author
+  margin-right: 16px
+
+.article__img
+  width: 96px
+  height: 96px
+  border-radius: 12px
+  margin-bottom: 32px
+  margin-left: 34px
+
+.article__read-btn
+  color: #151515
+  margin-top: 10px
+
+@media (max-width: 1165px)
+  .medium-article-container
+    display: none
+
+@media (max-width: 870px)
+  .big-article-container
+    display: none
+
+  .medium-article-container
+    display: block
+
+@media (max-width: 650px)
+  .medium-article-container
+    display: none
+
+  .article__img
+    width: 150px
+    height: 150px
+
+  .blog-section__list-articles
+    width: 100%
+    margin-left: 0
+
+  .article__description
+    margin-top: 30px

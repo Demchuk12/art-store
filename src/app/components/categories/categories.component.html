@@ -1,0 +1,17 @@
+<section class="categories container">
+  <div *ngIf="loading | async" class="spinner-wrapper">
+    <div class="spinner">
+    </div>
+    <p class="spinner-text">
+      Categories loading... Please wait
+    </p>
+  </div>
+  <div *ngIf="loaded | async" class="categories__category">
+    <div *ngFor='let category of categories$ | async' class="categories__category-container">
+      <a data-cy="categories-link" class="categories__link" routerLinkActive="active" routerLink="{{category.path}}">
+        {{category.category}}
+      </a>
+      <img src="/assets/images/categories-arrow.svg" alt="Categories arrow"/>
+    </div>
+  </div>
+</section>

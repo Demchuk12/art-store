@@ -1,0 +1,374 @@
+<div [@fadeIn] class="container shopping-cart">
+  <div class="shopping-cart__form-info">
+    <p class="font-text path"><a routerLink="/">Homepage / </a> Checkout page </p>
+    <h2 class="shopping-cart__form-title">Billing info</h2>
+    <div class="font-text shopping-cart__form-description">
+      <p class="shopping-cart__form-text">Please enter your billing info</p>
+      <p class="shopping-cart__form-steps">Step 1 of 5</p>
+    </div>
+    <form action="" [formGroup]="form" (ngSubmit)="sendBillingInfo()" class="shopping-cart__form">
+      <div class="shopping-cart__form-group">
+        <div>
+          <div class="shopping-cart__form-control">
+            <label class="font-title-small shopping-cart__form-control-label">First name</label>
+            <input class="input shopping-cart__form-input" formControlName="firstName" type="text"
+                   placeholder="First name">
+          </div>
+          <div class="validation" *ngIf="form.get('firstName')?.invalid && form.get('firstName')?.touched">
+            <small *ngIf="form.get('firstName')?.errors?.['required']">
+              Please enter info
+            </small>
+            <small *ngIf="form.get('firstName')?.errors?.['minlength']">
+              Too short
+            </small>
+            <small *ngIf="form.get('firstName')?.errors?.['maxlength']">
+              Too long
+            </small>
+          </div>
+          <div class="shopping-cart__form-control">
+            <label class="font-title-small shopping-cart__form-control-label">Email address</label>
+            <input class="input shopping-cart__form-input" formControlName="email" type="email"
+                   placeholder="Email address">
+          </div>
+          <div data-cy="validation-email" class="validation"
+               *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+            <small *ngIf="form.get('email')?.errors?.['required']">Please enter info</small>
+            <small *ngIf="form.get('email')?.errors?.['email']">Please enter a correct email</small>
+          </div>
+          <div class="shopping-cart__form-control">
+            <label class="font-title-small shopping-cart__form-control-label">Address</label>
+            <input class="input shopping-cart__form-input" formControlName="address" type="text" placeholder="Address">
+          </div>
+          <div data-cy="validation-address" class="validation"
+               *ngIf="form.get('address')?.invalid && form.get('address')?.touched">
+            <small *ngIf="form.get('address')?.errors?.['required']">Please enter info</small>
+            <small *ngIf="form.get('address')?.errors?.['minlength']">Too short</small>
+          </div>
+          <div class="shopping-cart__form-control">
+            <label class="font-title-small shopping-cart__form-control-label">State / Country</label>
+            <input class="input shopping-cart__form-input" formControlName="country" type="text"
+                   placeholder="Choose a state or Country">
+          </div>
+          <div data-cy="validation-country" class="validation"
+               *ngIf="form.get('country')?.invalid && form.get('country')?.touched">
+            <small *ngIf="form.get('country')?.errors?.['required']">Please enter info</small>
+            <small *ngIf="form.get('country')?.errors?.['minlength']">Too short</small>
+          </div>
+        </div>
+        <div>
+          <div class="shopping-cart__form-control">
+            <label class="font-title-small shopping-cart__form-control-label">Last name</label>
+            <input class="input shopping-cart__form-input" formControlName="lastName" type="text"
+                   placeholder="Last name">
+          </div>
+          <div class="validation" *ngIf="form.get('lastName')?.invalid && form.get('lastName')?.touched">
+            <small *ngIf="form.get('lastName')?.errors?.['required']">
+              Please enter info
+            </small>
+            <small *ngIf="form.get('lastName')?.errors?.['minlength']">
+              Too short
+            </small>
+            <small *ngIf="form.get('lastName')?.errors?.['maxlength']">
+              Too long
+            </small>
+          </div>
+          <div class="shopping-cart__form-control">
+            <label class="font-title-small shopping-cart__form-control-label">Phone number</label>
+            <input class="input shopping-cart__form-input" formControlName="phoneNumber" type="text"
+                   placeholder="Phone number">
+          </div>
+          <div data-cy="validation-phone" class="validation"
+               *ngIf="form.get('phoneNumber')?.invalid && form.get('phoneNumber')?.touched">
+            <small *ngIf="form.get('phoneNumber')?.errors?.['required']">Please enter info</small>
+            <small *ngIf="form.get('phoneNumber')?.errors?.['minlength']">Too short</small>
+            <small *ngIf="form.get('phoneNumber')?.errors?.['maxlength']">Too long</small>
+          </div>
+
+          <div class="shopping-cart__form-control">
+            <label class="font-title-small shopping-cart__form-control-label">Town / City</label>
+            <input class="input shopping-cart__form-input" formControlName="city" type="text"
+                   placeholder="Town or city">
+          </div>
+          <div data-cy="validation-city" class="validation"
+               *ngIf="form.get('city')?.invalid && form.get('city')?.touched">
+            <small *ngIf="form.get('city')?.errors?.['required']">Please enter info</small>
+            <small *ngIf="form.get('city')?.errors?.['minlength']">Too short</small>
+          </div>
+          <div class="shopping-cart__form-control">
+            <label class="font-title-small shopping-cart__form-control-label">ZIP/Postal code</label>
+            <input class="input shopping-cart__form-input" formControlName="zip" type="text"
+                   placeholder="Postal code or ZIP">
+          </div>
+          <div data-cy="validation-zip" class="validation" *ngIf="form.get('zip')?.invalid && form.get('zip')?.touched">
+            <small *ngIf="form.get('zip')?.errors?.['required']">Please enter info</small>
+            <small *ngIf="form.get('zip')?.errors?.['minlength']">Too short</small>
+          </div>
+        </div>
+      </div>
+      <div class="font-text-large input checkbox-ship">
+        <input class="buttons-checkbox-input" type="checkbox" id="checkboxFirst">
+        <label for="checkboxFirst">Ship to a different address?</label>
+      </div>
+      <h2 class="shopping-cart__form-title">Billing method</h2>
+      <div class="font-text shopping-cart__form-description">
+        <p class="shopping-cart__form-text">Please enter your payment method</p>
+        <p class="shopping-cart__form-steps">Step 2 of 5</p>
+      </div>
+      <div class="font-title-small shopping-cart__buy-methods">
+        <div class="input shopping-cart__buy-method">
+          <div class="shopping-cart__buy-method-input">
+            <input class="buttons-radio-input shopping-cart__radio" value="FedEx" formControlName="billingMethod"
+                   type="radio"
+                   id="radioFirst">
+            <label for="radioFirst">FedEx</label>
+          </div>
+          <span class="shopping-cart__additional">+32 USD</span>
+          <p class="shopping-cart__additional-block">
+            Additional price
+          </p>
+          <div class="shopping-cart__buy-method-company">
+            <img src="/assets/images/fedEx.svg" alt="FedEx">
+          </div>
+        </div>
+        <div class="input shopping-cart__buy-method">
+          <div class="shopping-cart__buy-method-input">
+            <input class="buttons-radio-input shopping-cart__radio" value="DHL" formControlName="billingMethod"
+                   type="radio"
+                   id="radioSecond">
+            <label for="radioSecond">DHL</label>
+          </div>
+          <span class="shopping-cart__additional">+15 USD</span>
+          <p class="shopping-cart__additional-block">
+            Additional price
+          </p>
+          <div class="shopping-cart__buy-method-company">
+            <img src="/assets/images/dhl.svg" alt="DHL">
+          </div>
+        </div>
+      </div>
+      <h2 class="shopping-cart__form-title">Payment method</h2>
+      <div class="font-text shopping-cart__form-description">
+        <p class="shopping-cart__form-text">Please enter your payment method</p>
+        <p class="shopping-cart__form-steps">Step 3 of 5</p>
+      </div>
+      <div class="font-title-small shopping-cart__buy-methods">
+        <div class="input shopping-cart__buy-method-checked">
+          <div class="shopping-cart__buy-method">
+            <div class="shopping-cart__buy-method-input shopping-cart__buy-method-input-checked">
+              <input class="buttons-radio-input shopping-cart__radio" value="Credit card"
+                     formControlName="paymentMethod"
+                     type="radio"
+                     id="radio3">
+              <label for="radio3">Credit card</label>
+            </div>
+            <div class="shopping-cart__buy-method-company">
+              <img src="/assets/images/creditCard.svg" alt="Credit card">
+            </div>
+          </div>
+          <div>
+            <div class="shopping-cart__form-control">
+              <label class="font-title-small shopping-cart__form-control-label">Card number</label>
+              <input class="input credit-card-input" formControlName="cardNumber" type="text"
+                     placeholder="Card number">
+            </div>
+            <div class="validation" *ngIf="form.get('cardNumber')?.invalid && form.get('cardNumber')?.touched">
+              <small *ngIf="form.get('cardNumber')?.errors?.['required']">
+                Please enter info
+              </small>
+              <small *ngIf="form.get('cardNumber')?.errors?.['minlength']">
+                Too short
+              </small>
+            </div>
+            <div class="credit-card-group">
+              <div class="credit-card-holder">
+                <div class="shopping-cart__form-control">
+                  <label class="font-title-small shopping-cart__form-control-label">Card holder</label>
+                  <input class="input credit-card-input" formControlName="cardHolder" type="text"
+                         placeholder="Card holder">
+                </div>
+                <div class="validation" *ngIf="form.get('cardHolder')?.invalid && form.get('cardHolder')?.touched">
+                  <small *ngIf="form.get('cardHolder')?.errors?.['required']">
+                    Please enter info
+                  </small>
+                  <small *ngIf="form.get('cardHolder')?.errors?.['minlength']">
+                    Too short
+                  </small>
+                </div>
+              </div>
+              <div class="credit-card-date">
+                <div class="shopping-cart__form-control">
+                  <label class="font-title-small shopping-cart__form-control-label">Expiration date</label>
+                  <input class="input credit-card-input" formControlName="date" type="text"
+                         placeholder="DD/MM/YY">
+                </div>
+                <div class="validation" *ngIf="form.get('date')?.invalid && form.get('date')?.touched">
+                  <small *ngIf="form.get('date')?.errors?.['required']">
+                    Please enter info
+                  </small>
+                  <small *ngIf="form.get('date')?.errors?.['minlength']">
+                    Too short
+                  </small>
+                </div>
+              </div>
+              <div class="credit-card-cvc">
+                <div class="shopping-cart__form-control">
+                  <label class="font-title-small shopping-cart__form-control-label">CVC</label>
+                  <input class="input credit-card-input" formControlName="cvc" type="text"
+                         placeholder="CVC">
+                </div>
+                <div class="validation" *ngIf="form.get('cvc')?.invalid && form.get('cvc')?.touched">
+                  <small *ngIf="form.get('cvc')?.errors?.['required']">
+                    Please enter info
+                  </small>
+                  <small *ngIf="form.get('cvc')?.errors?.['minlength'] || form.get('cvc')?.errors?.['maxlength']">
+                    CVC have 3 symbols
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="input shopping-cart__buy-method">
+          <div class="shopping-cart__buy-method-input">
+            <input class="buttons-radio-input shopping-cart__radio" value="PayPal" formControlName="paymentMethod"
+                   type="radio"
+                   id="radio4">
+            <label for="radio4">PayPal</label>
+          </div>
+          <div class="shopping-cart__buy-method-company">
+            <img src="/assets/images/payPal.svg" alt="PayPal">
+          </div>
+        </div>
+        <div class="input shopping-cart__buy-method">
+          <div class="shopping-cart__buy-method-input">
+            <input class="buttons-radio-input shopping-cart__radio" value="Bitcoin" formControlName="paymentMethod"
+                   type="radio"
+                   id="radio5">
+            <label for="radio5">Bitcoin</label>
+          </div>
+          <div class="shopping-cart__buy-method-company">
+            <img src="/assets/images/bitcoin.svg" alt="Bitcoin">
+          </div>
+        </div>
+      </div>
+      <h2 class="shopping-cart__form-title">Additional informations</h2>
+      <div class="font-text shopping-cart__form-description">
+        <p class="shopping-cart__form-text">Need something else? We will make it for you!</p>
+        <p class="shopping-cart__form-steps">Step 4 of 5</p>
+      </div>
+      <div class="shopping-cart__form-control">
+        <label class="font-title-small shopping-cart__form-control-label">Order notes</label>
+        <textarea class="input shopping-cart__form-textarea" formControlName="notes"
+                  type="text"
+                  placeholder="Need a specific delivery day? Sending a gitf? Let’s say ..."> </textarea>
+      </div>
+      <div class="validation" *ngIf="form.get('notes')?.invalid && form.get('notes')?.touched">
+        <small *ngIf="form.get('notes')?.errors?.['maxlength']">
+          Max length 1000 symbols
+        </small>
+      </div>
+      <h2 class="shopping-cart__form-title">Confirmation</h2>
+      <div class="font-text shopping-cart__form-description">
+        <p class="shopping-cart__form-text">We are getting to the end. Just few clicks and your order si ready!</p>
+        <p class="shopping-cart__form-steps">Step 5 of 5</p>
+      </div>
+      <div class="font-text-large input checkbox-agree-emails">
+        <input class="buttons-checkbox-input" type="checkbox" id="checkbox2">
+        <label for="checkbox2">I agree with sending an Marketing and newsletter emails. No spam, promissed!</label>
+      </div>
+      <div class="font-text-large input checkbox-agree-policy">
+        <input class="buttons-checkbox-input" type="checkbox" id="checkbox3">
+        <label for="checkbox3">I agree with our terms and conditions and privacy policy.</label>
+      </div>
+      <button class="button button-green shopping-cart__form-btn" type="submit" [disabled]="form.invalid">Complete
+        order
+      </button>
+    </form>
+    <div *ngIf="sending | async" class="spinner-wrapper">
+      <div class="spinner">
+      </div>
+      <p class="spinner-text">
+        Sending data... Please wait
+      </p>
+    </div>
+    <img class="shopping-cart__security-img" src="/assets/images/secrity.svg">
+    <p class="font-title-small">
+      All your data are safe
+    </p>
+    <span class="font-text shopping-cart__security-text">
+      We are using the most advanced security to provide you the best experience ever.
+    </span>
+  </div>
+
+  <div class="paintings paintings-cart">
+    <h2 class="font-title-medium paintings__title">Order Summary</h2>
+    <p class="font-text paintings__description">Price can change depending on shipping method and taxes of your
+      state.</p>
+    <div *ngIf="loaded | async">
+      <div data-cy="painting-in-cart" class="paintings__painting"
+           *ngFor="let painting of paintingsInCart$ | async; trackBy: trackPaintings">
+        <div class="paintings__painting-img-buttons">
+          <img class="paintings__painting-img" src="{{painting.img}}" alt="{{painting.name}}">
+          <button class="font-text paintings__painting-img-btn">
+            <img class="paintings__painting-img-btn-img" src="/assets/images/wishlist.svg" alt="X">
+            Wishlist
+          </button>
+          <button class="font-text paintings__painting-img-btn">
+            <img class="paintings__painting-img-btn-img" src="/assets/images/compare.svg" alt="X">
+            Compare
+          </button>
+          <button data-cy="remove-btn" class="font-text paintings__painting-img-btn"
+                  (click)="removePainting(painting)">
+            <img class="paintings__painting-img-btn-img" src="/assets/images/remove.svg" alt="X">
+            Remove
+          </button>
+        </div>
+        <div class="paintings__painting-info">
+          <p class="font-subtitle paintings__painting-title">{{painting.name}}</p>
+          <p class="font-text paintings__painting-author">{{painting.author}}</p>
+          <p class="paintings__painting-price">{{painting.price}} USD</p>
+          <div class="paintings__painting-sum-quantity">
+            <p class="font-title paintings__painting-sum"> {{painting.price * painting.quantity}} USD</p>
+            <div class="paintings__painting-quantity">
+              <button data-cy="decrement-btn" class="paintings__painting-quantity-btn"
+                      (click)="decrementPainting(painting)">-
+              </button>
+              <p data-cy="quantity" class="pcs">Pcs: {{painting.quantity}}</p>
+              <button data-cy="increment-btn" class="paintings__painting-quantity-btn"
+                      (click)="incrementPainting(painting)">+
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="loading | async" class="spinner-wrapper">
+      <div class="spinner">
+      </div>
+      <p class="spinner-text">
+        Loading... Please wait
+      </p>
+    </div>
+    <div class="font-title-small paintings__subtotal">
+      <div class="paintings__subtotal-column">
+        <span class="paintings__subtotal-column-text">Subtotal</span>
+        <span>Shipping</span>
+      </div>
+      <div class="paintings__subtotal-column paintings__subtotal-column-right">
+        <span class="paintings__subtotal-column-text">{{totalPrice}} USD</span>
+        <span>0 USD</span>
+      </div>
+    </div>
+    <div class="paintings__promo-block">
+      <input class="font-text-large paintings__promo-block-input" placeholder="Apply promo code">
+      <button class="paintings__promo-block-btn button">Apply now</button>
+    </div>
+    <div class="paintings__total">
+      <div class="paintings__total-block">
+        <p class="font-title-small paintings__total-text">Total Order</p>
+        <span class="font-text paintings__total-delivery">Guaranteed delivery day: in 2 days</span>
+      </div>
+      <p class="font-title-large paintings__total-price">{{totalPrice}} USD</p>
+    </div>
+  </div>
+</div>

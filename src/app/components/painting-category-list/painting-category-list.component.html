@@ -1,0 +1,56 @@
+<div class="painting-list">
+  <div class="painting-list__img-container">
+    <img class="painting-list__img" src="{{painting.img}}">
+  </div>
+  <div class="painting-list__details">
+    <p class="font-title painting-list__title">
+      {{painting.name}}
+    </p>
+    <span class="font-text painting-list__description">
+      Painting available for buy
+    </span>
+    <div class="painting-list__stars">
+      <img src="/assets/images/star-filled-category.svg" alt="" srcset="">
+      <img src="/assets/images/star-filled-category.svg" alt="" srcset="">
+      <img src="/assets/images/star-filled-category.svg" alt="" srcset="">
+      <img src="/assets/images/star-filled-category.svg" alt="" srcset="">
+      <img src="/assets/images/star-notFilled.svg" alt="" srcset="">
+    </div>
+    <div class="font-text-large painting-list__criteria">
+      <ul class="painting-list__criterion">
+        <li class="painting-list__criterion-item">Author:</li>
+        <li class="painting-list__criterion-item">Year:</li>
+        <li class="painting-list__criterion-item">Delivery</li>
+        <li class="painting-list__criterion-item">Stock</li>
+      </ul>
+      <ul class="painting-list__answer">
+        <li class="painting-list__criterion-item">{{painting.author}}</li>
+        <li class="painting-list__criterion-item">{{painting.year}}</li>
+        <li class="painting-list__criterion-item">Europe</li>
+        <li class="painting-list__criterion-item">In stock</li>
+      </ul>
+    </div>
+  </div>
+  <div class="painting-list__purchase">
+    <p class="font-title painting-list__purchase-price">
+      {{painting.price}} USD
+    </p>
+    <span class="font-text painting-list__purchase-shipping">
+      Free Shipping
+    </span>
+    <span class="font-text painting-list__purchase-delivery">
+      Delivery in 1 day
+    </span>
+    <div class="painting-list__purchase-buttons">
+      <button class="button button-green painting-list__purchase-detail-btn"
+              [routerLink]="['', painting.category,painting.id]">
+        Product Detail
+        <img src="/assets/images/white-arrow.svg">
+      </button>
+      <button class="button painting-list__purchase-wishlist-btn">
+        <img src="/assets/images/wishlist-black.svg">
+        Add to wish list
+      </button>
+    </div>
+  </div>
+</div>

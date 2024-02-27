@@ -1,0 +1,64 @@
+<div class="container blog-section">
+  <div class="blog-section__header">
+    <p class="font-title">
+      Read our Blog posts
+    </p>
+    <button class="font-subtitle blog-section__blog-btn" routerLink="/blog-page">
+      Go to Blog
+      <img class="blog-section__blog-btn-arrow" src="/assets/images/arrow-green-right.svg" alt="Arrow">
+    </button>
+  </div>
+  <div class="blog-section__articles">
+    <div *ngFor="let bigArticle of articles$ | async let i = index" [attr.data-index]="i">
+      <div class="big-article-container" *ngIf="i === 0">
+        <div class="big-article-wrapper blog-section__wrapper"
+             [ngStyle]="{'background-image': 'url(' + bigArticle.img + ')'}">
+          <div class="big-article">
+        <span class="tag-green font-title-small">
+          {{bigArticle.tags[0]}}
+        </span>
+            <div>
+              <p class="font-title-medium">
+                {{bigArticle.title}}
+              </p>
+              <div class="font-text big-article-description">
+                <div class="big-article-details">
+                  <img class="big-article-img-author" src="{{bigArticle.imgAuthor}}" alt="Author img">
+                  <span class="big-article-author">{{bigArticle.author}}</span>
+                  <span>{{bigArticle.date}}</span>
+                </div>
+                <a class="big-article-read-link"
+                   [routerLink]="['', 'blog-page', bigArticle.blogCategory, bigArticle.id]">
+                  Read article
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="medium-article-container" *ngIf="i === 1">
+        <app-blog-article [article]="bigArticle">
+        </app-blog-article>
+      </div>
+    </div>
+    <div class="blog-section__list-articles">
+      <div *ngFor="let article of articles$ | async let i = index" [attr.data-index]="i">
+        <div class="article" *ngIf="i >= 2 && i < 5">
+          <div>
+            <p class="font-subtitle">
+              {{article.title}}
+            </p>
+            <div class="font-text article__description">
+              <span class="article__author">{{article.author}}</span>
+              <span>{{article.date}}</span>
+            </div>
+            <a class="font-title-small article__read-btn"
+               [routerLink]="['', 'blog-page', article.blogCategory, article.id]">Read
+              more</a>
+          </div>
+          <img class="article__img" src="{{article.img}}">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

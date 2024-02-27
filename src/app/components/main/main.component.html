@@ -1,0 +1,41 @@
+<main class="main container">
+  <aside class="aside">
+    <div class="aside__block">
+      <p class="font-title aside__title">
+        Category menu
+      </p>
+      <app-aside-block></app-aside-block>
+    </div>
+    <div class="aside__block">
+      <p class="font-title aside__title">
+        Bestsellers
+      </p>
+      <app-aside-block></app-aside-block>
+    </div>
+    <div class="aside__block">
+      <p class="font-title aside__title">
+        Top Ranking
+      </p>
+      <app-aside-block></app-aside-block>
+    </div>
+    <div class="aside__block">
+      <p class="font-title aside__title">
+        Most Popular
+      </p>
+      <app-aside-block></app-aside-block>
+    </div>
+  </aside>
+  <section [@zoomIn] class="main__content">
+    <div class="main__articles content">
+      <article class="main__article">
+        <app-article></app-article>
+      </article>
+      <article class="main__article">
+        <app-article></app-article>
+      </article>
+    </div>
+    <app-bestsellers></app-bestsellers>
+    <app-top-ranking></app-top-ranking>
+    <app-most-popular></app-most-popular>
+  </section>
+</main>

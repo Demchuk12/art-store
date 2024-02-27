@@ -1,0 +1,56 @@
+.main__article:not(:last-child)
+  margin-right: 32px
+
+.main__article
+  width: 420px
+  max-height: 323px
+  border-radius: 12px
+  padding-left: 33px
+  padding-bottom: 44px
+  padding-right: 10px
+  opacity: 0.9
+
+.main__article:nth-child(1)
+  background-image: url("../../../assets/images/article1.jpg")
+  background-size: cover
+
+.main__article:nth-child(2)
+  background-image: url("../../../assets/images/article2.jpeg")
+  background-size: cover
+
+.aside__block
+  padding-top: 44px
+  padding-bottom: 44px
+
+.aside__title
+  margin: 0 0 16px
+
+.main__content
+  margin-left: 32px
+
+@media (max-width: 1200px)
+  .main__article
+    width: 48%
+
+  .main__article:not(:last-child)
+    margin-right: 22px
+
+  .main__articles
+    justify-content: flex-end
+    width: 100%
+
+  .main__content
+    width: 80%
+
+@media (max-width: 935px)
+  aside
+    display: none
+
+  .main__content
+    width: 100%
+    margin-left: 0
+
+  .main__articles
+    justify-content: space-between
+    flex-wrap: nowrap
+

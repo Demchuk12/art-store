@@ -1,0 +1,106 @@
+.aside-block
+  width: 300px
+
+.aside-block__categories-list,
+.aside-block__brands-list,
+.aside-block__rating-list
+  margin: 0
+  padding: 0
+  list-style: none
+
+.aside-block__categories-title,
+.aside-block__brands-title,
+.aside-block__rating-title,
+.aside-block__price-title
+  margin: 0 0 16px
+
+.aside-block__brands-title,
+.aside-block__rating-title,
+.aside-block__price-title
+  margin-top: 48px
+
+.aside-block__categories-list-item,
+.aside-block__categories-brands-item,
+.aside-block__categories-rating-item
+  margin-bottom: 12px
+
+.aside-block__categories-list-value
+  background: #F4F8EC
+  border-radius: 12px
+  padding: 0 8px
+  color: #6A983C
+  margin-left: 130px
+
+.aside-block__price-filter
+  width: 90%
+
+.aside-block__price-filter-range
+  position: relative
+
+.aside-block__price-filter-range-scale
+  height: 6px
+  border-radius: 12px
+  background-color: #EBEBEB
+
+.aside-block__price-filter-range-bar
+  height: 6px
+  width: 50%
+  background: #6A983C
+
+.aside-block__price-filter-range-handle-min,
+.aside-block__price-filter-range-handle-max
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  width: 20px
+  height: 20px
+  border: 1px solid #D1D1D1
+  border-radius: 50%
+  background-color: #FFFFFF
+  cursor: pointer
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15)
+
+.aside-block__price-filter-range-handle-min
+  left: 0
+
+.aside-block__price-filter-range-handle-max
+  left: 50%
+
+.aside-block__price-filter-interval
+  margin-top: 23px
+  display: flex
+  justify-content: space-between
+
+.aside-block__price-filter-interval input
+  width: 60px
+
+.aside-block__price-filter-interval-input
+  display: flex
+  flex-direction: column
+
+.aside-block__buttons
+  margin-top: 31px
+  display: flex
+
+.aside-block__button-apply
+  padding: 12px 16px
+  margin-right: 34px
+  width: 78px
+
+.aside-block__button-reset
+  color: #A9A9A9
+  border: none
+  background: none
+  font-weight: 600
+  font-size: 15px
+  line-height: 22px
+  cursor: pointer
+
+@media (max-width: 1150px)
+  .aside-block
+    width: 180px
+
+  .aside-block__categories-list-value
+    margin-left: 5px
+
+

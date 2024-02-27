@@ -1,0 +1,9 @@
+<div *ngIf="customer" class="review__details">
+  <p class="review__description">
+    {{customer.comment}}
+  </p>
+  <span class="font-title-small review__customer-name">
+    {{customer.name}}
+  </span>
+  <img style="width: 48px" class="review__customer-img" src="{{customer.img}}" alt="Customer Image">
+</div>

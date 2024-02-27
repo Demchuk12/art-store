@@ -1,0 +1,160 @@
+<header class="header container font-text">
+  <div class="header__navbar">
+    <div class="header__navbar-contacts">
+      <ul class="header__menu-contacts header__menu">
+        <li class="header__menu-contacts-item">
+          <a appTooltip="You can open the chat to contact us quickly and we will answered your questions"
+             class="header__menu-link header__menu-link__green" href="#"> Chat
+            with us </a>
+        <li class="header__menu-contacts-item">
+          <a appTooltip="Phone number to contact us" class="header__menu-link" href="#"
+             type="phone"> {{'099 12 345 67' | phoneFormat}} </a>
+        </li>
+        <li class="header__menu-contacts-item">
+          <a appTooltip="Use this email address to contact us when you will need any additional information"
+             class="header__menu-link" href="#"
+             type="email"> info@freshnesecom.com </a>
+        </li>
+      </ul>
+    </div>
+    <nav class="header__navbar-menu">
+      <ul class="header__menu">
+        <li appTooltip="Open our blog to subscribe to our news" class="header__menu-item">
+          <a class="header__menu-link header__menu-link__green" routerLink="/blog-page"> Blog </a>
+        <li appTooltip="Read information about our store" class="header__menu-item">
+          <a data-cy="about-us-link" class="header__menu-link header__menu-link__green" routerLink="/about-us"> About
+            Us </a>
+        </li>
+        <li class="header__menu-item">
+          <a data-cy="careers-link" class="header__menu-link header__menu-link__green" routerLink="/careers">
+            Careers </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <hr class="header__separator">
+  <div class="header__search-container">
+    <div class="header__logo">
+      <a routerLink="/">
+        <img alt="Header Logo" src="/assets/images/header-logo.svg">
+      </a>
+    </div>
+    <div class="menu">
+      <button (click)="menu = !menu" class="menu__btn">
+        <img class="menu__img" src="/assets/images/menu-icon.png">
+      </button>
+      <div class="menu__list" *ngIf="menu">
+        <ul class="list">
+          <li class="list-item" *ngFor="let category of categories$ | async"><a routerLinkActive="active"
+                                                                                routerLink="{{category.path}}"
+                                                                                (click)="menu = !menu"
+                                                                                class="list-link">
+            {{category.category}}
+          </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header__search-panel">
+      <div class="header__list-categories">
+        <select class="header__categories-select header__text-list" name="" id="">
+          <option> All categories</option>
+          <option *ngFor="let category of categories$ | async"> {{category.category}} </option>
+        </select>
+      </div>
+      <input class="header__search-input" placeholder="Search paintings, categories ..." type="search">
+      <div appTooltip="Search products, categories" class="header__search-icon">
+        <img alt="Search button" src="/assets/images/search-button.svg">
+      </div>
+    </div>
+    <div class="header__icons">
+      <div appTooltip="Open your personal account" class="header__icon header__account-icon">
+        <img alt="Account icon" src="/assets/images/account-icon.svg">
+      </div>
+      <div>
+        <a (click)="modal = true" data-cy="shopping-cart-link" class="shopping-cart-link">
+          <img alt="Shopping cart icon" src="/assets/images/shopping-cart-icon.svg">
+          <span [@pulse]="(paintingsInCart$ | async)?.length" *ngIf="(paintingsInCart$ | async)?.length !== 0"
+                class="shopping-cart-quantity">
+            {{(paintingsInCart$ | async)?.length}}
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+<div *ngIf="modal" class="modal-cart">
+  <div [@slideInUp] class="modal-cart__content">
+    <div class="modal-cart__header">
+      <p class="font-title-large modal-cart__title">
+        Shopping cart
+      </p>
+      <div class="modal-cart__close">
+        <span class="font-text modal-cart__close-text">
+          Close
+        </span>
+        <button (click)="modal = false" class="modal-cart__close-btn">
+          <img src="/assets/images/close.svg">
+        </button>
+      </div>
+    </div>
+    <div class="paintings">
+      <div *ngIf="loaded | async">
+        <div class="paintings__painting" *ngFor="let painting of paintingsInCart$ | async; trackBy: trackPaintings">
+          <div class="paintings__painting-img-buttons">
+            <img class="paintings__painting-img" src="{{painting.img}}" alt="{{painting.name}}">
+            <button class="font-text paintings__painting-img-btn">
+              <img class="paintings__painting-img-btn-img" src="/assets/images/wishlist.svg" alt="X">
+              Wishlist
+            </button>
+            <button class="font-text paintings__painting-img-btn">
+              <img class="paintings__painting-img-btn-img" src="/assets/images/compare.svg" alt="X">
+              Compare
+            </button>
+            <button data-cy="remove-btn" class="font-text paintings__painting-img-btn"
+                    (click)="removePainting(painting)">
+              <img class="paintings__painting-img-btn-img" src="/assets/images/remove.svg" alt="X">
+              Remove
+            </button>
+          </div>
+          <div class="paintings__painting-info">
+            <p class="font-subtitle paintings__painting-title">{{painting.name}}</p>
+            <p class="font-text paintings__painting-author">{{painting.author}}</p>
+            <p class="paintings__painting-price">Price: {{painting.price}} USD</p>
+            <div class="paintings__painting-sum-quantity">
+              <p class="font-title paintings__painting-sum"> {{painting.price * painting.quantity}} USD</p>
+              <div class="paintings__painting-quantity">
+                <button class="paintings__painting-quantity-btn"
+                        (click)="decrementPainting(painting)">-
+                </button>
+                <p class="pcs">Pcs: {{painting.quantity}}</p>
+                <button class="paintings__painting-quantity-btn"
+                        (click)="incrementPainting(painting)">+
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="loading | async" class="spinner-wrapper">
+        <div class="spinner">
+        </div>
+        <p class="spinner-text">
+          Loading... Please wait
+        </p>
+      </div>
+      <div class="paintings__total paintings__total-modal">
+        <p class="font-title-small paintings__total-text">Subtotal</p>
+        <p class="font-title-large paintings__total-price paintings__total-price-modal">{{totalPrice}} USD</p>
+      </div>
+    </div>
+    <div class="modal-cart__footer">
+      <a class="button modal-cart__footer-link" (click)="modal=false">
+        Continue shopping
+      </a>
+      <button class="button button-green modal-cart__footer-btn" (click)="modal=false" routerLink="/shopping-cart">
+        Go to checkout
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<section class="category-header container">
+  <div *ngFor="let painting of paintings$ | async let i = index" [attr.data-index]="i">
+    <div *ngIf="i === 0">
+      <p class="font-text path"><a routerLink="/">Homepage / </a> {{painting.category | titlecase}} </p>
+      <div class="category-header__group">
+        <h1 class="category-header__title font-title-more-large">
+          {{painting.category | titlecase}}
+        </h1>
+        <div class="category-header__buttons">
+          <div class="font-text category-header__btn-container">
+            <button (click)="grid = true" class="category-header__btn">
+              <img [ngClass]="{active__icon : grid}" src="/assets/images/grid.svg">
+            </button>
+            <span [ngClass]="{active : grid}">
+              Grid view
+            </span>
+          </div>
+          <div class="font-text category-header__btn-container">
+            <button (click)="grid = false" class="category-header__btn">
+              <img [ngClass]="{active__icon : !grid}" src="/assets/images/list.svg">
+            </button>
+            <span [ngClass]="{active : !grid}">
+              List view
+            </span>
+          </div>
+          <div class="category-header__products">
+            <span class="font-title-small tag-green category-header__products-quantity">
+              {{(paintings$ | async)?.length}}
+            </span>
+            <span class="font-text category-header__text">Products</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-filtres-category></app-filtres-category>
+</section>
+<main class="container main-block">
+  <app-aside-block-category></app-aside-block-category>
+  <div *ngIf="loading | async" class="spinner-wrapper">
+    <div class="spinner">
+    </div>
+    <p class="spinner-text">
+      Paintings loading... Please wait
+    </p>
+  </div>
+  <section *ngIf="loaded | async" class="category">
+    <div *ngIf="grid" class="category__paintings">
+      <app-painting-category [@fadeIn]
+                             *ngFor="let painting of paintings$ | async"
+                             [painting]="painting"
+      >
+      </app-painting-category>
+    </div>
+    <div *ngIf="!grid" class="category__paintings-list">
+      <app-painting-category-list [@fadeIn]
+                                  *ngFor="let painting of paintings$ | async"
+                                  [painting]="painting"
+      >
+      </app-painting-category-list>
+    </div>
+  </section>
+</main>

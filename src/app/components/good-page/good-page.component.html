@@ -1,0 +1,288 @@
+<main class="container main-container">
+  <div *ngIf="loading | async" class="spinner-wrapper">
+    <div class="spinner">
+    </div>
+    <p class="spinner-text">
+      Painting loading... Please wait
+    </p>
+  </div>
+  <div *ngIf="loaded | async">
+    <div [@fadeIn] *ngFor="let painting of paintings$ | async">
+      <p class="font-text path">
+        <a routerLink="/">Homepage / </a>
+        <a routerLink="/{{painting.category}}">{{painting.category | titlecase}} /</a>
+        {{painting.name | titlecase}}
+      </p>
+      <div class="main-goods">
+        <div class="main-goods__images">
+          <img class="main-goods__img" src="{{painting.img}}" alt="Painting img">
+          <img class="main-goods__img" src="{{painting.img}}" alt="Painting img">
+          <img class="main-goods__img" src="{{painting.img}}" alt="Painting img">
+        </div>
+        <div class="main-goods__info">
+          <p class="font-title-more-large main-goods__title">
+            {{painting.name | titlecase}}
+          </p>
+          <span class="font-text-more-large main-goods__description">
+          <b>Artist: </b> {{painting.author}},
+          <b>Estimated date:</b> {{painting.year}}
+        </span>
+          <div class="font-text-large main-goods__details">
+            <div class="main-goods__details-column">
+              <div class="main-goods__detail">
+                <p class="main-goods__detail-item">
+                  SKU:
+                </p>
+                <p class="main-goods__detail-item">
+                  Category:
+                </p>
+                <p class="main-goods__detail-item">
+                  Stock:
+                </p>
+                <p class="main-goods__detail-item">
+                  Farm
+                </p>
+              </div>
+              <div>
+                <p>
+                  76645
+                </p>
+                <p>
+                  {{painting.category}}
+                </p>
+                <p>
+                  In Stock
+                </p>
+                <p>
+                  Grocery Tarm Fields
+                </p>
+              </div>
+            </div>
+            <div class="main-goods__details-column">
+              <div class="main-goods__detail">
+                <p class="main-goods__detail-item">
+                  Freshness:
+                </p>
+                <p class="main-goods__detail-item">
+                  Buy by:
+                </p>
+                <p class="main-goods__detail-item">
+                  Delivery:
+                </p>
+                <p class="main-goods__detail-item">
+                  Delivery area
+                </p>
+              </div>
+              <div>
+                <p>
+                  1 days old
+                </p>
+                <p>
+                  pcs, kgs, box, pack
+                </p>
+                <p>
+                  in 2 days
+                </p>
+                <p>
+                  Czech republic
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="main-goods__purchase-block">
+            <p class="font-title-large main-goods__purchase-price">{{painting.price}} USD</p>
+            <div class="main-goods__purchase-buttons">
+              <div class="input main-goods__purchase-options">
+                <input class="font-text-large main-goods__purchase-input" type="text" placeholder="1">
+                <img src="/assets/images/separator.svg">
+                <select class="font-title-small main-goods__purchase-select" name="" id="">
+                  <option> Pcs</option>
+                </select>
+              </div>
+              <button data-cy="buy-btn" *ngIf="!painting.inCart" (click)="addToCart(painting)"
+                      class="button button-green main-goods__purchase-button-add">
+                <img class="main-goods__purchase-button-add-icon" src="/assets/images/add-btn.svg">
+                Add to cart
+              </button>
+              <button data-cy="already-in-cart-btn" class="button button-green main-goods__purchase-button-add"
+                      *ngIf="painting.inCart">
+                Already in cart
+              </button>
+            </div>
+          </div>
+          <div class="main-goods__buttons">
+            <button class="main-goods__button">
+              <img class="main-goods__button-icon" src="/assets/images/wish-icon.svg">
+              Add to my wish list
+            </button>
+            <button class="main-goods__button">
+              <img class="main-goods__button-icon" src="/assets/images/compare-icon.svg">
+              Compare
+            </button>
+          </div>
+          <mat-tab-group class="main-goods__tabs">
+            <mat-tab>
+              <ng-template mat-tab-label>
+                <span class="main-goods__tabs-label">Description</span>
+              </ng-template>
+              <div class="main-goods__tabs-content">
+                <p class="font-subtitle main-goods__tabs-content-title">
+                  Painting
+                </p>
+                <span class="font-text-large main-goods__tabs-content-description">
+                Painting is the practice of applying paint, pigment, color or other medium to a solid surface (called the"matrix" or "support").
+                The medium is commonly applied to the base with a brush, but other implements,such as knives, sponges, and airbrushes, can be used.
+              </span>
+                <p class="font-subtitle main-goods__tabs-content-title">
+                  Elements of painting
+                </p>
+                <span class="font-text-large main-goods__tabs-content-description">
+                Color, made up of hue, saturation, and value, dispersed over a surface is the essence of painting, just as pitch and rhythm are the essence of music.
+                Color is highly subjective, but has observable psychological effects, although these can differ from one culture to the next. Black is associated with mourning in the West, but in the East, white is.
+                Some painters, theoreticians, writers, and scientists, including Goethe, Kandinsky, and Newton, have written their own color theory.
+              </span>
+                <p class="font-subtitle main-goods__tabs-content-title">
+                  Painting styles
+                </p>
+                <span class="font-text-large main-goods__tabs-content-description">
+                Style is used in two senses: It can refer to the distinctive visual elements, techniques, and methods that typify an individual artist's work.
+                It can also refer to the movement or school that an artist is associated with.
+                This can stem from an actual group that the artist was consciously involved with or it can be a category in which art historians have placed the painter.
+                The word 'style' in the latter sense has fallen out of favor in academic discussions about contemporary painting, though it continues to be used in popular contexts.
+              </span>
+              </div>
+            </mat-tab>
+            <mat-tab>
+              <ng-template mat-tab-label>
+              <span class="main-goods__tabs-label">Reviews <span
+                class="font-title-small tag-green main-goods__reviews-quantity">{{(reviews$ | async)?.length}}</span></span>
+              </ng-template>
+              <div class="main-goods__tabs-content">
+                <div class="main-goods__tabs-reviews">
+                  <div *ngFor="let review of reviews$ | async">
+                    <div class="review">
+                      <div class="review__details">
+                        <p class="review__description">
+                          {{review.comment}}
+                        </p>
+                        <span class="review__customer-score">
+                    {{review.score}}
+                  </span>
+                        <span class="font-title-small review__customer-name">
+                    {{review.name}},{{review.email}}
+                  </span>
+                      </div>
+                    </div>
+                  </div>
+                  <h2>Leave your review</h2>
+                  <div class="form">
+                    <form class="form__content" [formGroup]="form" (ngSubmit)="addReview(painting.id)">
+                      <div class="form__control">
+                        <label>Name:</label>
+                        <input class="input form__input" formControlName="name" type="text"
+                               placeholder="Enter your name">
+                      </div>
+                      <div class="validation" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+                        <small *ngIf="form.get('name')?.errors?.['required']">
+                          Please enter your name
+                        </small>
+                        <small *ngIf="form.get('name')?.errors?.['minlength']">
+                          Min length is 3 letters, please enter a correct name
+                        </small>
+                        <small *ngIf="form.get('name')?.errors?.['maxlength']">
+                          Max length is 20 letters, please enter a correct name
+                        </small>
+                      </div>
+                      <div class="form__control">
+                        <label>Email address:</label>
+                        <input class="input form__input" formControlName="email" type="email"
+                               placeholder="Enter your email address">
+                      </div>
+                      <div class="validation" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+                        <small *ngIf="form.get('email')?.errors?.['required']">
+                          Please enter your email
+                        </small>
+                        <small *ngIf="form.get('email')?.errors?.['email']">
+                          Please enter a correct email
+                        </small>
+                      </div>
+                      <div class="form__control">
+                        <label>Choose your score:</label>
+                        <select class="input form__select" formControlName="score">
+                          <option class="form__select-option">1 — Disappointed</option>
+                          <option class="form__select-option">2 — Bad</option>
+                          <option class="form__select-option">3 — Neutral</option>
+                          <option class="form__select-option">4 — Satisfied</option>
+                          <option class="form__select-option">5 — Excellent</option>
+                        </select>
+                      </div>
+                      <div class="validation" *ngIf="form.get('score')?.invalid && form.get('score')?.touched">
+                        <small *ngIf="form.get('score')?.errors?.['required']">
+                          Please choose a score
+                        </small>
+                      </div>
+                      <div class="form__control">
+                        <label>Leave your comment: </label>
+                        <textarea class="input form__textarea" formControlName="comment"> </textarea>
+                      </div>
+                      <div class="validation" *ngIf="form.get('comment')?.invalid && form.get('comment')?.touched">
+                        <small *ngIf="form.get('comment')?.errors?.['maxlength']">
+                          Max length is 1000 characters
+                        </small>
+                      </div>
+                      <button class="button button-green form__button" type="submit" [disabled]="form.invalid">Send a
+                        review
+                      </button>
+                    </form>
+                  </div>
+                  <div *ngIf="sendingReview | async" class="spinner-wrapper">
+                    <div class="spinner">
+                    </div>
+                    <p class="spinner-text">
+                      Sending data... Please wait
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </mat-tab>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                <span class="main-goods__tabs-label">Questions</span>
+              </ng-template>
+              <div class="main-goods__tabs-content">
+                <p class="font-subtitle main-goods__tabs-content-title">
+                  What is the benefit of working with you?
+                </p>
+                <span class="font-text-large main-goods__tabs-content-description">
+                Customer Service. Our success has been based on delivering high quality painting services with exceptional customer service.
+                We stand behind our work and will work with you to make sure you are happy with the experience and the finished product.
+              </span>
+                <p class="font-subtitle main-goods__tabs-content-title">
+                  What time will the goods be shipped?
+                </p>
+                <span class="font-text-large main-goods__tabs-content-description">
+                Your order will be made ready to ship as soon as we have received your payment and we have all items for your order in stock.
+                We can also offer part deliveries if one or more items are delaying the dispatch. We will notify you by email as soon as your parcel is shipped.
+                The overall delivery time depends on the relevant destination country.
+                Shipping time is generally 2-5 days (8-10 days during high season).
+                We will most of the time be faster than that, but there are some factors that we have no influence over, e.g. delivery difficulties of the supplier or once your order is in the hands of the carrier.
+              </span>
+                <p class="font-subtitle main-goods__tabs-content-title">
+                  Do you have return policies?
+                </p>
+                <span class="font-text-large main-goods__tabs-content-description">
+                If you are not satisfied with your purchase for any reason, you can return the product within 30 days of purchase.
+                We will provide you with a return shipping label upon your return request.
+                You can choose to exchange the product, return it for store credit, or get a refund to your original payment method.
+                Please note that returned products must be unworn, in the original packaging, and with the original tags still attached.
+                If the returned items do not satisfy these requirements, your return will not be eligible for a refund or exchange.
+              </span>
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+

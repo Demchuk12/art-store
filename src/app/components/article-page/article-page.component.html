@@ -1,0 +1,151 @@
+<main class="article-page container">
+  <div *ngIf="loading | async" class="spinner-wrapper">
+    <div class="spinner">
+    </div>
+    <p class="spinner-text">
+      Article loading... Please wait
+    </p>
+  </div>
+  <div *ngIf="loaded | async">
+    <div [@fadeIn] *ngIf="article$ | async as article">
+      <p class="font-text path">
+        <a routerLink="/">Homepage / </a>
+        <a routerLink="/blog-page">Blog / </a>
+        <a [routerLink]="['', 'blog-page', article.blogCategory]">{{article.blogCategory | titlecase}} /</a>
+        {{article.title | titlecase}}
+      </p>
+      <div class="article-page__article-wrapper" [ngStyle]="{'background-image': 'url(' + article.img + ')'}">
+        <div class="article-page__article">
+          <div class=" font-title-small article-page__article-lists">
+            <ul class="list article-page__article-list">
+              <li class="list-item">Date:</li>
+              <li class="list-item">Category:</li>
+              <li class="list-item">Author:</li>
+            </ul>
+            <ul class="list article-page__article-list">
+              <li class="list-item">{{article.date}}</li>
+              <li class="list-item">{{article.blogCategory | titlecase}}</li>
+              <li class="list-item">{{article.author}}</li>
+            </ul>
+          </div>
+          <p class="font-title-more-large">{{article.title}}</p>
+        </div>
+      </div>
+      <div class="article-page__main">
+        <aside class="article-page__aside">
+          <p class="font-title">Tags</p>
+          <div class="article-page__tags">
+            <div class="font-title-small tag-green article-page__tag" *ngFor="let tag of article.tags">{{tag}}</div>
+          </div>
+          <button class="font-subtitle article-page__back-btn" routerLink="/blog-page">
+            <img src="/assets/images/arrow-article-page.svg" alt="Arrow">
+            Back to Blog
+          </button>
+        </aside>
+        <section>
+          <div class="font-text-more-large article-page__text">
+            {{article.article}}
+          </div>
+          <div class="article-page__share">
+            <span class="font-title"> Share </span>
+            <div class="font-subtitle tag-grey article-page__share-tag">
+              <img src="/assets/images/facebook-logo.svg" alt="Facebook">
+              <span class="article-page__tag-text">Facebook</span>
+            </div>
+            <div class="font-subtitle tag-grey article-page__share-tag">
+              <img src="/assets/images/pinterest-logo.svg" alt="Pinterest">
+              <span class="article-page__tag-text">Pinterest</span>
+            </div>
+            <div class="font-subtitle tag-grey article-page__share-tag">
+              <img src="/assets/images/twitter-logo.svg" alt="Twitter">
+              <span class="article-page__tag-text">Twitter</span>
+            </div>
+            <div class="font-subtitle tag-grey article-page__share-tag">
+              <img src="/assets/images/in-logo.svg" alt="LinkedIn">
+              <span class="article-page__tag-text">LinkedIn</span>
+            </div>
+          </div>
+          <p class="font-title-medium article-page__reply-title">Leave a reply</p>
+          <span class="font-text-more-large">
+          Already have an account? <a class="article-page__sign-in-link" href="#"> Sign in </a> to leave a reply.
+        </span>
+          <form [formGroup]="form" (ngSubmit)="sendComment(article.id)">
+            <div class="article-page__controls">
+              <div class="article-page__control-wrapper">
+                <div class="article-page__form-control">
+                  <label class="font-title-small">Name</label>
+                  <input class="input article-page__form-input" formControlName="author" type="text"
+                         placeholder="Name">
+                </div>
+                <div class="validation" *ngIf="form.get('author')?.invalid && form.get('author')?.touched">
+                  <small *ngIf="form.get('author')?.errors?.['required']">
+                    Please enter info
+                  </small>
+                  <small *ngIf="form.get('author')?.errors?.['minlength']">
+                    Too short
+                  </small>
+                  <small *ngIf="form.get('author')?.errors?.['maxlength']">
+                    Too long
+                  </small>
+                </div>
+              </div>
+              <div class="article-page__control-wrapper">
+                <div class="article-page__form-control">
+                  <label class="font-title-small">Email address</label>
+                  <input class="input article-page__form-input" formControlName="email" type="email"
+                         placeholder="Email address">
+                </div>
+                <div class="validation"
+                     *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+                  <small *ngIf="form.get('email')?.errors?.['required']">Please enter info</small>
+                  <small *ngIf="form.get('email')?.errors?.['email']">Please enter a correct email</small>
+                </div>
+              </div>
+            </div>
+            <div class="font-text-large input article-page__save-email">
+              <input class="buttons-checkbox-input" type="checkbox" id="checkbox">
+              <label for="checkbox">Save my name and email in this browser for a next time comment.</label>
+            </div>
+            <div class="article-page__form-control">
+              <label class="font-title-small">Comment</label>
+              <textarea class="input article-page__form-input article-page__form-textarea" formControlName="text"
+                        type="text"
+                        placeholder="Space for your comments"> </textarea>
+            </div>
+            <div class="validation" *ngIf="form.get('text')?.invalid && form.get('text')?.touched">
+              <small *ngIf="form.get('text')?.errors?.['required']">
+                Please enter info
+              </small>
+              <small *ngIf="form.get('text')?.errors?.['maxlength']">
+                Max length is 1000 characters
+              </small>
+            </div>
+            <button class="button button-green article-page__form-btn" type="submit" [disabled]="form.invalid">Send a
+              comment
+            </button>
+          </form>
+          <div *ngIf="sendingComment| async" class="spinner-wrapper">
+            <div class="spinner">
+            </div>
+            <p class="spinner-text">
+              Sending data... Please wait
+            </p>
+          </div>
+          <div *ngIf="(articleComments$ | async)?.length !== 0">
+            <p class="font-title-medium article-page__comments-title">
+              Comments:
+            </p>
+            <div *ngFor="let parent of articleCommentsParent$ | async">
+              <ul class="list">
+                <li class="list-item">
+                  <app-comment *ngIf="parent" [comment]="parent"></app-comment>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+

@@ -1,0 +1,1056 @@
+{
+  "categories": [
+    {
+      "category": "Realism",
+      "path": "/realism",
+      "blogPath": "blog-page/realism"
+    },
+    {
+      "category": "Photorealism",
+      "path": "/photorealism",
+      "blogPath": "blog-page/photorealism"
+    },
+    {
+      "category": "Expressionism",
+      "path": "/expressionism",
+      "blogPath": "blog-page/expressionism"
+    },
+    {
+      "category": "Impressionism",
+      "path": "/impressionism",
+      "blogPath": "blog-page/impressionism"
+    },
+    {
+      "category": "Abstract",
+      "path": "/abstract",
+      "blogPath": "blog-page/abstract"
+    },
+    {
+      "category": "Surrealism",
+      "path": "/surrealism",
+      "blogPath": "blog-page/surrealism"
+    },
+    {
+      "category": "Pop-Art",
+      "path": "/pop-art",
+      "blogPath": "blog-page/pop-art"
+    },
+    {
+      "category": "Modernism",
+      "path": "/modernism",
+      "blogPath": "blog-page/modernism"
+    },
+    {
+      "category": "Cubism",
+      "path": "/cubism",
+      "blogPath": "blog-page/cubism"
+    }
+  ],
+  "paintings": [
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1374px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+      "name": "Mona Lisa",
+      "author": "Leonardo da Vinci",
+      "year": 1519,
+      "price": 78,
+      "bestsellerRate": 1,
+      "mostPopular": 1,
+      "inCart": false,
+      "category": "realism",
+      "id": 1
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg/715px-Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg",
+      "name": "Girl with a Pearl Earring",
+      "author": "Johannes Vermeer",
+      "year": 1665,
+      "price": 77,
+      "topRanking": 3,
+      "inCart": false,
+      "category": "realism",
+      "id": 2
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Van_Eyck_-_Arnolfini_Portrait.jpg/748px-Van_Eyck_-_Arnolfini_Portrait.jpg",
+      "name": "The Arnolfini Portrait",
+      "author": "Jan van Eyck",
+      "year": 1434,
+      "price": 43,
+      "bestsellerRate": 3,
+      "mostPopular": 2,
+      "inCart": false,
+      "category": "modernism",
+      "id": 3
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/ru/c/c0/Duchamp_-_Nude_Descending_a_Staircase.jpg",
+      "name": "Nude Descending Stair",
+      "author": "Marcel Duchamp",
+      "year": 1912,
+      "price": 98,
+      "bestsellerRate": 4,
+      "topRanking": 1,
+      "inCart": false,
+      "category": "modernism",
+      "id": 4
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/603px-The_Scream.jpg",
+      "name": "The Scream",
+      "author": "Edvard Munch",
+      "year": 1910,
+      "price": 96,
+      "bestsellerRate": 5,
+      "topRanking": 2,
+      "mostPopular": 3,
+      "inCart": false,
+      "category": "expressionism",
+      "id": 5
+    },
+    {
+      "img": "https://media.overstockart.com/optimized/cache/data/product_images/VE2967-1000x1000.jpg",
+      "name": "The Milkmaid",
+      "author": "Johannes Vermeer",
+      "year": 1519,
+      "price": 56,
+      "bestsellerRate": 6,
+      "inCart": false,
+      "category": "modernism",
+      "id": 6
+    },
+    {
+      "img": "https://learnodo-newtonic.com/wp-content/uploads/2017/08/The-Gross-Clinic-1875-Thomas-Eakins.jpg",
+      "name": "THE GROSS CLINIC",
+      "author": "Thomas Eakins",
+      "year": 1875,
+      "price": 59,
+      "inCart": false,
+      "category": "realism",
+      "id": 7
+    },
+    {
+      "img": "https://learnodo-newtonic.com/wp-content/uploads/2017/08/The-Angelus-1859-Jean-Francois-Millet.jpg",
+      "name": "THE ANGELUS",
+      "author": "Jean-Francois Millet",
+      "year": 1859,
+      "price": 36,
+      "inCart": false,
+      "category": "realism",
+      "id": 8
+    },
+    {
+      "img": "https://learnodo-newtonic.com/wp-content/uploads/2017/08/The-Gleaners-1857-Jean-Francois-Millet.jpg",
+      "name": "THE GLEANERS",
+      "author": "Jean-Francois Millet",
+      "year": 1857,
+      "price": 46,
+      "inCart": false,
+      "category": "realism",
+      "id": 9
+    },
+    {
+      "img": "https://learnodo-newtonic.com/wp-content/uploads/2017/08/Christinas-World-1948-Andrew-Wyeth.jpg",
+      "name": "CHRISTINA’S WORLD",
+      "author": "Andrew Wyeth",
+      "year": 1948,
+      "price": 42,
+      "inCart": false,
+      "category": "realism",
+      "id": 10
+    },
+    {
+      "img": "https://cdn.mos.cms.futurecdn.net/yZUp2rJ5wSMnrHVEYHcg5Q-1200-80.jpg.webp",
+      "name": "Lollipop",
+      "author": "Miguel Angel Nunez",
+      "year": 1988,
+      "price": 18,
+      "inCart": false,
+      "category": "photorealism",
+      "id": 11
+    },
+    {
+      "img": "https://cdn.mos.cms.futurecdn.net/N3MkYR9yTpunMumSz4cv9Q-1200-80.jpg.webp",
+      "name": "Self-Portrait",
+      "author": "Chuck Close",
+      "year": 1999,
+      "price": 22,
+      "inCart": false,
+      "category": "photorealism",
+      "id": 12
+    },
+    {
+      "img": "https://cdn.mos.cms.futurecdn.net/NeoUpK8cvo7jrUiCzQbzc9-1200-80.jpg",
+      "name": "Ball-point pen on paper",
+      "author": "Oscar Ukonu",
+      "year": 1928,
+      "price": 92,
+      "inCart": false,
+      "category": "photorealism",
+      "id": 13
+    },
+    {
+      "img": "https://cdn.mos.cms.futurecdn.net/aVV4hEcPgmy7pBLPrj3or7-1200-80.jpg",
+      "name": "Animal portraits",
+      "author": "Ester Curini",
+      "year": 1998,
+      "price": 2,
+      "inCart": false,
+      "category": "photorealism",
+      "id": 14
+    },
+    {
+      "img": "https://cdn.thecollector.com/wp-content/uploads/2020/05/wassily_kandinsky_the_blue_rider_1903.jpg?width=1400&quality=55",
+      "name": "The Blue Rider",
+      "author": "Wassily Kandinsky",
+      "year": 1903,
+      "price": 62,
+      "inCart": false,
+      "category": "expressionism",
+      "id": 15
+    },
+    {
+      "img": "https://cdn.thecollector.com/wp-content/uploads/2020/05/erich_heckel_portrait_of_a_man_1919-839x1024.jpg?width=1400&quality=55",
+      "name": "Portrait of a Man",
+      "author": "Erich Heckel",
+      "year": 1919,
+      "price": 52,
+      "inCart": false,
+      "category": "expressionism",
+      "id": 16
+    },
+    {
+      "img": "https://cdn.thecollector.com/wp-content/uploads/2020/05/ernst_ludwig_kirchner_street_berlin_1913-774x1024.jpg?width=1200&quality=55",
+      "name": "Street, Berlin",
+      "author": "Ernst Ludwig Kirchner",
+      "year": 1913,
+      "price": 43,
+      "inCart": false,
+      "category": "expressionism",
+      "id": 17
+    },
+    {
+      "img": "https://www.theartist.me/wp-content/uploads/2017/07/Woman-Reading-by-Edouard-Manet.jpg",
+      "name": "Woman Reading",
+      "author": "Edouard Manet",
+      "year": 1879,
+      "price": 42,
+      "inCart": false,
+      "category": "impressionism",
+      "id": 18
+    },
+    {
+      "img": "https://www.theartist.me/wp-content/uploads/2017/07/Young-Woman-Sewing-in-a-Garden-by-Mary-Cassat.jpg",
+      "name": "Young Woman Sewing in a Garden",
+      "author": "Mary Cassat",
+      "year": 1886,
+      "price": 4,
+      "inCart": false,
+      "category": "impressionism",
+      "id": 19
+    },
+    {
+      "img": "https://www.theartist.me/wp-content/uploads/2017/07/Water-Lily-Pond-by-Claude-Monet.jpg",
+      "name": "Water Lily Pond",
+      "author": "Claude Monet",
+      "year": 1899,
+      "price": 20,
+      "inCart": false,
+      "category": "impressionism",
+      "id": 20
+    },
+    {
+      "img": "https://ik.imagekit.io/theartling/prod/original_images/miro-c3a9toile-bleue.jpg?tr=c-at_max,bg-FFFFFF,w-1650",
+      "name": "Peinture",
+      "author": "Joan Miro",
+      "year": 1927,
+      "price": 2,
+      "inCart": false,
+      "category": "abstract",
+      "id": 21
+    },
+    {
+      "img": "https://ik.imagekit.io/theartling/prod/original_images/19487.jpg?tr=c-at_max,bg-FFFFFF,w-1650",
+      "name": "Abstract Painting 599",
+      "author": "Gerhard Richter",
+      "year": 1986,
+      "price": 10,
+      "inCart": false,
+      "category": "abstract",
+      "id": 22
+    },
+    {
+      "img": "https://ik.imagekit.io/theartling/prod/original_images/2017_NYR_14187_0006B_000cy_twombly_leda_and_the_swan.jpg?tr=c-at_max,bg-FFFFFF,w-1650",
+      "name": "Cy Twombly",
+      "author": "Leda and the Swan",
+      "year": 1962,
+      "price": 8,
+      "inCart": false,
+      "category": "abstract",
+      "id": 23
+    },
+    {
+      "img": "https://ik.imagekit.io/theartling/prod/original_images/christine-ay-tjoe-_-small_flies_and_other_wings__2013__oil_on_canvas__165x.jpg?tr=c-at_max,bg-FFFFFF,w-1650",
+      "name": "Small Flies and Other Wings",
+      "author": "Christine Ay Tjoe",
+      "year": 2013,
+      "price": 6,
+      "inCart": false,
+      "category": "abstract",
+      "id": 24
+    },
+    {
+      "img": "https://az334033.vo.msecnd.net/images-7/indefinite-divisibility-yves-tanguy-1942-c7a8a4cb.jpg",
+      "name": "Indefinite Divisibility",
+      "author": "Yves Tanguy",
+      "year": 1942,
+      "price": 4,
+      "inCart": false,
+      "category": "surrealism",
+      "id": 25
+    },
+    {
+      "img": "https://blog.artsper.com/wp-content/uploads/2021/01/Celestial-Pablum-Remedios-Varo-Uranga.png",
+      "name": "Celestial Pablum",
+      "author": "Remedios Varo Uranga",
+      "year": 1858,
+      "price": 9,
+      "inCart": false,
+      "category": "surrealism",
+      "id": 26
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/en/1/1b/De_Chirico%27s_Love_Song.jpg",
+      "name": "The Song of Love",
+      "author": "Giorgio de Chirico",
+      "year": 1914,
+      "price": 4,
+      "inCart": false,
+      "category": "surrealism",
+      "id": 27
+    },
+    {
+      "img": "https://imagenes.museothyssen.org/sites/default/files/imagen/obras/1974.46_sueno-causado-vuelo-abeja-alrededor-granada-segundo-antes-despertar.jpg",
+      "name": "Dream caused by the flight",
+      "author": "Salvador Dali",
+      "year": 1944,
+      "price": 21,
+      "inCart": false,
+      "category": "surrealism",
+      "id": 28
+    },
+    {
+      "img": "https://learnodo-newtonic.com/wp-content/uploads/2013/07/On-the-Balcony-by-Peter-Blake.jpg",
+      "name": "ON THE BALCONY",
+      "author": "Peter Blake",
+      "year": 1957,
+      "price": 1,
+      "inCart": false,
+      "category": "pop-art",
+      "id": 29
+    },
+    {
+      "img": "https://learnodo-newtonic.com/wp-content/uploads/2013/07/I-was-a-Rich-Mans-Plaything-by-Eduardo-Paolozzi.jpg",
+      "name": "I WAS A RICH MAN’S PLAYTHING",
+      "author": "Eduardo Paolozzi",
+      "year": 1947,
+      "price": 41,
+      "inCart": false,
+      "category": "pop-art",
+      "id": 30
+    },
+    {
+      "img": "https://learnodo-newtonic.com/wp-content/uploads/2013/07/Just-what-is-it-that-makes-todays-homes-so-different-so-appealing-by-Richard-Hamilton.jpg",
+      "name": "JUST WHAT IS IT THAT MAKES",
+      "author": "Richard Hamilton",
+      "year": 1956,
+      "price": 11,
+      "inCart": false,
+      "category": "pop-art",
+      "id": 31
+    },
+    {
+      "img": "https://learnodo-newtonic.com/wp-content/uploads/2013/07/Drowning-Girl-by-Roy-Lichtenstein.jpg",
+      "name": "DROWNING GIRL",
+      "author": "Roy Lichtenstein",
+      "year": 1963,
+      "price": 31,
+      "inCart": false,
+      "category": "pop-art",
+      "id": 32
+    },
+    {
+      "img": "https://learnodo-newtonic.com/wp-content/uploads/2014/12/The-Two-Fridas-1939-Frida-Kahlo.jpg",
+      "name": "LAS DOS FRIDAS",
+      "author": "Frida Kahlo",
+      "year": 1939,
+      "price": 41,
+      "inCart": false,
+      "category": "modernism",
+      "id": 33
+    },
+    {
+      "img": "https://www.theartist.me/wp-content/uploads/2017/07/Glass-of-Beer-and-Playing-Cards-by-Juan-Gris.jpg",
+      "name": "Glass of Beer",
+      "author": "Juan Gris",
+      "year": 1913,
+      "price": 1,
+      "inCart": false,
+      "category": "cubism",
+      "id": 34
+    },
+    {
+      "img": "https://www.theartist.me/wp-content/uploads/2017/07/Portrait-of-Pablo-Picasso-by-Juan-Gris.jpg",
+      "name": "Portrait of Pablo Picasso",
+      "author": " Juan Gris",
+      "year": 1912,
+      "price": 3,
+      "inCart": false,
+      "category": "cubism",
+      "id": 35
+    },
+    {
+      "img": "https://www.theartist.me/wp-content/uploads/2017/07/Harlequin-with-a-Guitar-by-Juan-Gris.jpg",
+      "name": "Harlequin with a Guitar",
+      "author": "Juan Gris",
+      "year": 1917,
+      "price": 91,
+      "inCart": false,
+      "category": "cubism",
+      "id": 36
+    }
+  ],
+  "customers": [
+    {
+      "name": "Karla",
+      "img": "https://petapixel.com/assets/uploads/2019/02/download-2-800x800.jpeg",
+      "comment": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "id": "1"
+    },
+    {
+      "name": "Vika",
+      "img": "https://external-preview.redd.it/7mDZ-a-pDbK8R5RvHFmU1-24T6VdBdlYIHiCFHyNR8k.jpg?auto=webp&s=1fbe82adecf50c7d24f635c58437fcd3d1f8121c",
+      "comment": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "id": "2"
+    },
+    {
+      "name": "Tom",
+      "img": "https://images.squarespace-cdn.com/content/v1/5938f1841b631b8e4ea7c2df/1570162240212-F4B6PQ9GJQGQ5WUBOF8P/man+2.jpg",
+      "comment": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "id": "3"
+    },
+    {
+      "name": "Ben",
+      "img": "https://mymodernmet.com/wp/wp-content/uploads/2019/09/100k-ai-faces-6.jpg",
+      "comment": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "id": "3"
+    },
+    {
+      "name": "Piter",
+      "img": "https://miro.medium.com/max/1024/1*vW234iL2w0KbhNdMuc0O1w.jpeg",
+      "comment": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "id": "3"
+    }
+  ],
+  "goodsReviews": [
+    {
+      "name": "Vika",
+      "email": "Vika@gmail.com",
+      "score": "5 - Excellent",
+      "comment": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "id": "1",
+      "paintingId": 1
+    },
+    {
+      "name": "Tom",
+      "email": "Tom@gmail.com",
+      "score": "4 - Satisfied",
+      "comment": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "id": "2",
+      "paintingId": 2
+    },
+    {
+      "name": "Ben",
+      "email": "Ben@gmail.com",
+      "score": "2 - Bad",
+      "comment": "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here",
+      "id": "3",
+      "paintingId": 7
+    },
+    {
+      "name": "Vika",
+      "email": "vika@gh",
+      "score": "3 — Neutral",
+      "comment": "",
+      "paintingId": 22,
+      "id": "pjfv1jz"
+    },
+    {
+      "name": "Vika",
+      "email": "test@hj",
+      "score": "3 — Neutral",
+      "comment": "",
+      "paintingId": 11,
+      "id": "TztkqmN"
+    },
+    {
+      "name": "Test",
+      "email": "123@s",
+      "score": "3 — Neutral",
+      "comment": "",
+      "paintingId": 11,
+      "id": "tDRQPij"
+    },
+    {
+      "name": "Sergey",
+      "email": "ser@123",
+      "score": "3 — Neutral",
+      "comment": "Good",
+      "paintingId": 25,
+      "id": "e7mTj_k"
+    },
+    {
+      "name": "Test",
+      "email": "test@hjk",
+      "score": "4 — Satisfied",
+      "comment": "",
+      "paintingId": 1,
+      "id": "mJjsFGk"
+    },
+    {
+      "name": "work",
+      "email": "work@h",
+      "score": "4 — Satisfied",
+      "comment": "",
+      "paintingId": 1,
+      "id": "kpFW94-"
+    },
+    {
+      "name": "good",
+      "email": "go@df",
+      "score": "4 — Satisfied",
+      "comment": "",
+      "paintingId": 8,
+      "id": "b2MIBZP"
+    },
+    {
+      "name": "Review",
+      "email": "bh@gh",
+      "score": "5 — Excellent",
+      "comment": "Good",
+      "paintingId": 31,
+      "id": "gxzm5M5"
+    },
+    {
+      "name": "dfghj",
+      "email": "hgf@fg",
+      "score": "3 — Neutral",
+      "comment": "",
+      "paintingId": 11,
+      "id": "d_WUdev"
+    },
+    {
+      "name": "Vika",
+      "email": "v@ghj",
+      "score": "3 — Neutral",
+      "comment": "",
+      "paintingId": 21,
+      "id": "Hz1zr3d"
+    },
+    {
+      "name": "Mary",
+      "email": "mary@re",
+      "score": "3 — Neutral",
+      "comment": "Good",
+      "paintingId": 14,
+      "id": "tpvltCK"
+    },
+    {
+      "name": "Denis",
+      "email": "Denis@d",
+      "score": "5 — Excellent",
+      "comment": "Good",
+      "paintingId": 28,
+      "id": "Mdr7ZIo"
+    },
+    {
+      "name": "Georg",
+      "email": "Georg@df",
+      "score": "5 — Excellent",
+      "comment": "",
+      "paintingId": 27,
+      "id": "gFHPOtC"
+    },
+    {
+      "name": "vika",
+      "email": "vika@te",
+      "score": "5 — Excellent",
+      "comment": "good",
+      "paintingId": 30,
+      "id": "ONwHcG-"
+    },
+    {
+      "name": "Sergey",
+      "email": "sergey@gmail.com",
+      "score": "5 — Excellent",
+      "comment": "Good!!!!",
+      "paintingId": 18,
+      "id": "UR2A70r"
+    },
+    {
+      "name": "dfg",
+      "email": "sdf@fd",
+      "score": "3 — Neutral",
+      "comment": "",
+      "paintingId": 11,
+      "id": "1hBI54d"
+    },
+    {
+      "name": "dfg",
+      "email": "dfg@fgh",
+      "score": "2 — Bad",
+      "comment": null,
+      "paintingId": 11,
+      "id": "X--7grJ"
+    },
+    {
+      "name": "Vika",
+      "email": "vika@fg",
+      "score": "5 — Excellent",
+      "comment": "",
+      "paintingId": 1,
+      "id": "oh_wa0s"
+    }
+  ],
+  "basket": [
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1374px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+      "name": "Mona Lisa",
+      "author": "Leonardo da Vinci",
+      "year": 1519,
+      "price": 78,
+      "bestsellerRate": 1,
+      "mostPopular": 1,
+      "inCart": true,
+      "category": "realism",
+      "id": 1,
+      "quantity": 1
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/603px-The_Scream.jpg",
+      "name": "The Scream",
+      "author": "Edvard Munch",
+      "year": 1910,
+      "price": 96,
+      "bestsellerRate": 5,
+      "topRanking": 2,
+      "mostPopular": 3,
+      "inCart": true,
+      "category": "expressionism",
+      "id": 5,
+      "quantity": 1
+    }
+  ],
+  "billingInfo": [],
+  "articles": [
+    {
+      "title": "A Brief History of Van Gogh’s Starry Night",
+      "author": "Peggy Carouthers",
+      "date": "03.08.2021",
+      "img": "https://www.artandobject.com/sites/default/files/styles/gallery_item/public/starrynight-edited.jpg?itok=gGlg6L6J",
+      "imgAuthor": "https://nextbigwhat.com/wp-content/uploads/2019/02/AI-thispersondoesnotexist.jpg",
+      "blogCategory": "modernism",
+      "article": "On the inspiration for The Starry Night, van Gogh wrote to Theo, “This morning I saw the countryside from my window a long time before sunrise, with nothing but the morning star, which looked very big.”\n\nThough the painter preferred working from observation, he was not allowed to paint in his room, so he began painting the star he had seen in his studio without the view for reference, applying paint to the canvas directly from the tubes to create the image’s iconic thick lines and intense colors. The result was the dream-like image, which features wavy cypress trees in the foreground and glowing stars, a bright crescent moon, a swirling sky, rolling hills, and a village in the background. Some of the elements, such as the mountains in the distance and the existence of the village are true to the view van Gogh would have seen from his window. Meanwhile, other parts, such as the steeple on the church, are imagined.\n\nWhile van Gogh painted the same view several times with each interpretation appearing different than the last, it is this celestial-inspired image that has captivated viewers for nearly a century. \n\nUpon its completion, van Gogh actually believed the painting to be a failure. He wrote to Theo, \"All in all the only things I consider a little good in it are the Wheatfield, the Mountain, the Orchard, the Olive trees with the blue hills and the Portrait and the Entrance to the quarry, and the rest says nothing to me.\"",
+      "tags": [
+        "Landscape",
+        "Oil"
+      ],
+      "id": 1
+    },
+    {
+      "title": "Leda & the Swan Through Art History",
+      "author": "Dian Parker",
+      "date": "06.10.2022",
+      "img": "https://www.artandobject.com/sites/default/files/styles/gallery_item/public/correggio-ledaandtheswan-googleartproject.jpg?itok=50EOHGX7",
+      "imgAuthor": "https://2.bp.blogspot.com/-wUD2SGHiBCg/XGVk3D2_6FI/AAAAAAACkqc/LWNsgSdN5YwQNqy7IsRj95GrjqauK5ZzACLcBGAs/s1600/thispersondoesnotexist-2.jpg",
+      "blogCategory": "expressionism",
+      "article": "“Leda and the Swan,” a sonnet by W. B. Yeats, begins: “A sudden blow: the great wings beating still. Above the staggering girl, her thighs caressed. By the dark webs, her nape caught in his bill, He holds her helpless breast upon his breast.” This moment of sexual violation inflicted on Leda by the god Zeus has inspired painters and sculptors for centuries. \n\nZeus, the god of sky and thunder, was known as the king and father of the gods. According to the Greek myth, when Zeus saw Leda, a beautiful human and wife of King Tyndareus of Sparta, he became enamored and obsessed. Zeus transformed himself into a magnificent swan to 'seduce' Leda. That same night, she also slept with her husband. She ultimately fell pregnant with children from both men and eventually gave birth to two eggs. From these eggs hatched four children: two sets of twins. Two carried Zeus’s blood and two carried the King’s. One of Zeus’s offspring is a boy, named Pollux. His twin sister became Helen of Troy, whose beauty caused the Trojan War.\n\n According to the art historian Giorgio Vasari, Michelangelo was commissioned to paint the myth for Alfonso, Duke of Ferrara. It was painted in tempera on a square canvas in 1530. But when Alfonso declared the painting as a “little thing,” Michelangelo refused to hand it over. Since then, the painting has been lost but many copied his work. The most famous copy hangs in the National Gallery.",
+      "tags": [
+        "Portrait",
+        "Greek art",
+        "Oil"
+      ],
+      "id": 2
+    },
+    {
+      "title": "Philip Guston's Pinks and Reds",
+      "author": "Dian Parker",
+      "date": "27.09.2022",
+      "img": "https://www.artandobject.com/sites/default/files/styles/gallery_item/public/open-window-1969-private-collection-estate-pg-courtesy-hauser-wirth.jpg?itok=eTe80zzS",
+      "imgAuthor": "https://2.bp.blogspot.com/-wUD2SGHiBCg/XGVk3D2_6FI/AAAAAAACkqc/LWNsgSdN5YwQNqy7IsRj95GrjqauK5ZzACLcBGAs/s1600/thispersondoesnotexist-2.jpg",
+      "blogCategory": "abstract",
+      "article": "Philip Guston was one of the most courageous and controversial painters to come out of the New York School of Abstract Expressionism. Critics called the 1950s Guston’s “mandarin” (influential) years. For years, he’d been creating paintings that were abstract and lush. Suddenly, he deviated, yearning to break free. He said, \"I got sick and tired of all that purity! I wanted to tell stories!\"\n\nThus began the paintings of political and social satire derived from Guston’s sense of profound distaste with current affairs. His disapproval and unrest accelerated with Nixon and the Vietnam War. To contend with the tumultuous time, he often portrayed himself, the painter, shrouded in a Klu Klux Klan hood, in the studio, cigarette dangling, paintbrushes in hand. His iconography remains visceral and vulnerable.\n \n Adding to this imagery, Guston began to paint primarily with pink and red tones. Scalding pinks, scathing reds – fleshy cartoons in bubblegum pink and blood red. Seen up close, one becomes aware of the torment he felt as he painted. The colors are in-your-face with thick impasto brushstrokes. The work is fresh, honest, and immediate. \n\n Choosing these colors and the cartoon-like images incited much criticism at the time. Critics slammed him. Robert Hughes in Time magazine wrote in 1970: “We are left with a group of sumptuously painted canvases, sometimes witty, occasionally moving, and for the most part caricaturally blunt. As political statement, they are all as simple-minded as the bigotry they denounce.\n\nToday, people take offense with Guston’s white-hooded figures, offering trigger warnings; “Emotional Awareness.” This is the topic of the pink card you take before you even enter Philip Guston Now at the Boston Museum of Fine Art. The exhibit had been postponed because museums also on the tour – National Gallery of Art, in D.C; Tate Modern, in London; Museum of Fine Arts, Houston – were afraid of audience reaction. Shock? Guston’s relevance today is shocking. Our fraught times appear to be worse.",
+      "tags": [
+        "City",
+        "Oil"
+      ],
+      "id": 3
+    },
+    {
+      "title": "The Surreal World of Salvador Dali",
+      "author": "Afzal Ibrahim",
+      "date": "20.03.2021",
+      "img": "https://www.theartist.me/wp-content/uploads/2019/08/salvador-dali-painting.jpg",
+      "imgAuthor": "https://pbs.twimg.com/media/EhWcspoXcAQcxH2?format=jpg&name=medium",
+      "blogCategory": "surrealism",
+      "article": "If one were to just take a look at the photos of Salvador Dali online, you would know immediately this was no ordinary individual.  With his crazy moustache and bizarre quotes, he expressed his opinion constantly, and especially through his artwork.\n\nBorn in Catalonia, Spain in 1904, he was a true surrealistic artist, drawing often from his own childhood sexual desires, mostly freakish and quite disturbing.\n\n Dali always stated that he didn’t do drugs, although many would look at his art and disagree, but Dali claimed he was drugs.   That through his work he could influence many an open mind, whether for the good or bad.\n\nIf we take a look at a few of his famous pieces, we can see that his obsession with the unconscious mind was obvious.\n\n\nThe Persistence of Memory shows us a few seemingly soft or melted pocket watches lying about in an open land.  Dali’s message was to show that time and space are relative and that we, in fact, live in a universe of complete disorder. Another of his most recognizable artworks is ‘The Great Mastrubator’, which at first glance seems more like fellatio being performed that masturbating.  It is clear though that Dali had real issues with sex and the sexual act itself, stemming from his youth.  He claims that as a young boy his father had accidentally (or not) left out a book of sufferers of untreated venereal diseases.  The disturbing photos must have left a deep mark on Dali and in turn, he brought these into his paintings.\n\n People are strange creatures and while they may hesitate at the idea of expression like this, they are secretly fascinated.  This is the main reason why Dali’s works are so popular.  With his surrealism style, he takes everyday activities and combines them with fantasy, yet managing to connect and communicate his thoughts through a truly theatrical medium. Not all of Dali’s works are so sexual.  Take The Elephants for example.  While still a surrealist view and one to debate for hours, there doesn’t seem to be a sexual connotation to this painting, or is there?  You decide.\n\n",
+      "tags": [
+        "Object",
+        "Paint",
+        "Oil"
+      ],
+      "id": 4
+    },
+    {
+      "title": "The Story Behind the World’s Largest Watercolor Painting",
+      "author": "Jennifer Nalewicki",
+      "date": "22.06.2017",
+      "img": "https://th-thumbnailer.cdn-si-edu.com/1bh_nTNPLewQngUN87I1iVyolMU=/fit-in/1072x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/2a/6a/2a6a84a2-c936-4319-856d-cae1a2655354/completed_painting_1_barbara_prey_mass_moca_commission.jpg",
+      "imgAuthor": "https://3.bp.blogspot.com/-ebJmSEE58uc/XGVk3_yZ6cI/AAAAAAACkqk/7DrvojfRysUghuWmu_NWaAqCIfrg9AfrgCLcBGAs/s1600/thispersondoesnotexist.jpg",
+      "blogCategory": "realism",
+      "article": "Watercolors are among the least forgiving mediums for artists to work with. Not only are they relatively transparent, runny and overall precarious, but mistakes like an errant brushstroke are often difficult to cover up. Still, when the Massachusetts Museum of Contemporary Art (MASS MoCA) approached celebrated contemporary painter Barbara Prey about creating what would become the largest known watercolor painting in the world to celebrate the opening of Building 6, its newest wing located in North Adams, Massachusetts, she was up for the challenge.\n\nOver the years, numerous government agencies and institutions have tapped the Fulbright Scholar to take on significant art projects—including the White House, where Prey is one of only two living female artists to have their work on display in its permanent collection (she also designed its Christmas card in 2003), and NASA, which commissioned her to create four paintings.\n\n In other words, Prey is no stranger to completing high-profile art projects. For MASS MoCA, it took her about a year from start to finish to complete the massive watercolor painting, which measures 8 feet by 15 feet, or 120 square feet, and is a detailed replica of the second floor of Building 6, a former textile mill, as it looked before renovations began to transform it into a museum.\n\nThe finished piece includes painted facsimiles of the sprawling building’s columns, windows and endless layers of paint. But bringing the painting to life was the easy part. It was gathering the materials to start the project in the first place that proved to be the most difficult.",
+      "tags": [
+        "Architecture",
+        "Watercolor"
+      ],
+      "id": 5
+    },
+    {
+      "title": "‘The Scream’ Gets a New Home in Norway’s $650 Million National Museum",
+      "author": "Sarah Kuta",
+      "date": "10.06.2022",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/603px-The_Scream.jpg",
+      "imgAuthor": "https://th-thumbnailer.cdn-si-edu.com/63ZeNGUDBRlalBFUeve-3SBvAec=/fit-in/160x80/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/accounts/headshot/SarahKuta.png",
+      "blogCategory": "expressionism",
+      "article": "One evening in 1892, Norwegian artist Edvard Munch took a walk with two friends in Oslo. As the sun went down, “the sky turned blood-red,” and Munch felt “a great infinite scream” go through nature, the painter later wrote.\n\nInspired by that poignant moment, Munch painted The Scream the following year. The work depicts a haunting, mysterious figure with hands on either side of its face, its mouth open in an apparent shriek. One of the most famous paintings of all time, its renown is on par with Leonardo da Vinci’s Mona Lisa and Vincent van Gogh’s Sunflowers.\n\nNow, Munch’s iconic painting—and several other of the artist’s works—is getting a new home at the new $650 million National Museum, which opens in Oslo this week. Located across from Oslo’s city hall on the edge of a fjord, the massive new Nasjonalmuseet facility—one of the largest museums in Europe by size—brings together four of Norway’s main art and design institutions: the National Gallery, the Museum of Architecture, the Museum of Decorative Arts and Design, and the Museum of Contemporary Art.\n\nAt 584,480 square feet, Norway’s new museum has plenty of room for the works of Munch and many others. Norwegian artists like Johan Christian Dahl and Harriet Backer also get their own dedicated rooms within the facility.\n\nWith the impressive new facility, which took eight years to build, Norwegian leaders hope to elevate the country’s arts and culture prowess, especially when compared to its Scandinavian neighbors. After all, Hindsbo tells the New York Times’ Thomas Rogers, the country is “so much more than fjords and mountains.”",
+      "tags": [
+        "Feelings",
+        "Oil",
+        "Pastel"
+      ],
+      "id": 6
+    },
+    {
+      "title": "Impressionism: The Movement That Went Against The French Art Academy",
+      "author": "Shira Wolfe",
+      "date": "01.02.2021",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/5/54/Claude_Monet%2C_Impression%2C_soleil_levant.jpg",
+      "imgAuthor": "https://images.fineartamerica.com/images/artistlogos/shira-wolfe-1607125463-square.jpg",
+      "blogCategory": "impressionism",
+      "article": "Following the example of the ground-breaking 1863 Salon des Refusés, in the spring of 1874 a group of unacknowledged French painters, who at the time called themselves Le Societé Anonyme des Artistes and organised exhibitions that were not controlled by the reigning Paris Salon, organised an exhibition in the former studio space of one of their friends, the notorious photographer Nadar. The exhibition included works by Claude Monet, Pierre Auguste Renoir, Edgar Degas, Paul Cézanne, Camille Pissarro, Alfred Sisley and Berthe Morisot. Approximately 200 works were exhibited, and seen by about 4000 people. As the well-known story goes, art critic Louis Leroy gave a seething review of the exhibition, mockingly naming the group Impressionists, after Monet’s painting Impression: Sunrise which was particularly ridiculed by critics. “Impression—I was certain of it. I was just telling myself that, since I was impressed, there had to be some impression in it … and what freedom, what ease of workmanship! Wallpaper in its embryonic state is more finished than that seascape,” were the mocking words of Leroy.\nThe artists, however, co-opted the term and were from then on to be known as the Impressionists. The exhibition made history. This was the first time that Paris had witnessed a large-scale independent exhibition of avant-garde art, a direct challenge to the salon, the academic tradition’s historical subject matter and methods, and the official art world.\n\n The greatest difference between the style and method of the Impressionists compared to the art of the established Académie des Beaux-Arts was that these artists moved away from completely realistic depictions of historical subject matter. They were interested in nature and landscape scenes (one can think of Monet’s harbor views, seascapes and garden impressions), as well as urban everyday life scenes (think of Degas entering dance halls, opera houses and ballet classes to paint these everyday subjects then and there, or Renoir’s keen eye for Parisian leisure-seekers).\n",
+      "tags": [
+        "Landscape",
+        "Oil"
+      ],
+      "id": 7
+    },
+    {
+      "title": "Art Movement: Pop Art",
+      "author": "Shira Wolfe",
+      "date": "18.03.2022",
+      "img": "https://images.masterworksfineart.com/2018/01/29/andy-warhol-campbell-soup-cans-series-2/andy-warhol-campbells-soup-1-1024x768.jpg",
+      "imgAuthor": "https://images.fineartamerica.com/images/artistlogos/shira-wolfe-1607125463-square.jpg",
+      "blogCategory": "pop-art",
+      "article": "The first definition of Pop Art was provided by British curator Lawrence Alloway, who invented the term ‘Pop Art’ in 1955 to describe a new form of art characterized by the imagery of consumerism, new media, and mass reproduction. Through bold, simple, everyday imagery, and vibrant block colors, Pop Art was one of the first art movements to narrow the divide between commercial and fine arts.\nPop Art artists took inspiration from advertising, pulp magazines, billboards, movies, television, comic strips, and shop windows for their humorous, witty and ironic works, which both can be seen as a celebration and a critique of popular culture.\n\n Although generally associated with the United States, Pop Art found an early voice in Britain as a critical and ironic reflection on the post-War consumer culture of the late 1950s.\nIn 1952 Britain, in fact, a group of artists, writers, and critics which would come to be known as ‘Independent Group’ – or simply ‘IG’ – began to meet regularly, driven by a common perception of a gap between the art and life of the time to discuss new theories and methods to incorporate in the artistic practice those aspects of visual culture that weren’t traditionally part of it but that had inevitably become elements of the everyday life, from product packaging to cinema celebrities.\nThe group’s collective exhibition This Is Tomorrow, held at the Whitechapel Gallery in London in 1956, served as the key starting point for Pop Art, providing an unprecedented example of integration between art and modern life.",
+      "tags": [
+        "Object",
+        "Paint"
+      ],
+      "id": 8
+    },
+    {
+      "title": "Color Psychology: Why We Love Some and Hate Others?",
+      "author": "The Artist Editorial",
+      "date": "04.05.2018",
+      "img": "https://lobopopart.com.br/wp-content/uploads/2020/05/Arte-Brasileira.jpg",
+      "imgAuthor": "https://www.theartist.me/wp-content/uploads/2022/03/theartist.melogo.jpg",
+      "blogCategory": "pop-art",
+      "article": "Imagine you are looking at a surface that has been splashed with color. Perhaps it is paper, or an artist’s palette, or a wall. There is blue there, and green, and gray and yellow and red, in varying shades and quantities. Color psychology has an underlying and subtle towards our perceptions to a reaction.\n\now: how do you feel? — Perhaps your first reaction might be a pleasure. People, like looking at colors, and seeing many beautiful shades jumbled together, is usually something we would find ourselves enjoying.\n\nThink of the proverbial example of a child seeing a bright light, and reaching out for it, only to discover that the light hurts you if you try to hold it. But then, the light also allows you to see. It warms you. It cooks your food. The child learns that nothing is ever simple. That bright light which drew him contains pleasure and pain in equal measure. The color psychology has subtly started its operation here at this moment.Through either first-hand experience or observation, we find out the facts of our lives and ourselves, collecting impressions along the way. The moments we spend taking in the information are forgotten. It is very unlikely you would be able to pinpoint the exact moment you learned that a dog can run, or that a bird can fly. (You may remember learning that you yourself cannot fly, in the grand tradition of children falling out of trees, but that’s another matter.)But the effects of the information remain, along with their impressions. And so it is with color, these concepts carrying all that we have learned with them. When that child, the one who learned not to try to touch a flame, grows up and comes across something which carries the same color as that first flame — vermillion, perhaps, or a bright amber or cadmium — memories of pain, pleasure, and brightness will stir in his psyche.\n\nThe purposes, motivations, intentions, and inspirations behind art are endless. Colors play a major role in this purpose",
+      "tags": [
+        "Color",
+        "Watercolor",
+        "Paint"
+      ],
+      "id": 9
+    },
+    {
+      "title": "Why You Must Know Goya’s Black Paintings, The Darkest Painting Series in the World",
+      "author": "The Artist Editorial",
+      "date": "19.01.2022",
+      "img": "https://i0.wp.com/auralcrave.com/wp-content/uploads/2020/01/blackpaintings.jpg?resize=810%2C580&ssl=1",
+      "imgAuthor": "https://www.theartist.me/wp-content/uploads/2022/03/theartist.melogo.jpg",
+      "blogCategory": "expressionism",
+      "article": "The power of art lies neither in the image nor the emotions it arouses in the viewer, rather its greatness is derived from understanding the creative forces which inspired the masterpiece. Goya’s black paintings series is a great example that proves this theory.\n\nFrancisco Goya, the most important Spanish artist of late 18th and early 19th centuries, has been crowned by many as the last of the Old Masters and the father of modern art. The enigmatic and dark series, the Black Paintings, are the natural outcome of his life. The turbulent political times as well as a string of personal tragedies and illness shaped his thinking and marked the climax of his illustrious artistic career.\n\nWhat drove Goya to paint such macabre, grisly images?\n\nAre they the ravings of a mad man on the verge of insanity?\n\nOr are they a grotesque mirror of human nature, chronicling overwhelming terror and despair?\n\nBy exploring Goya’s evolution from a highly ambitious commercial painter in the Spanish Court to a hermit painting, the solemn series of Black Paintings on the walls of his home, you will understand how his work and thoughts on human nature changed art forever.Goya’s Black Paintings are the climax of his work as a painter. Through these frightful images, he expressed the fears which plagued him.\n\nThe nightmarish, demonic figures in the Black paintings, with gaping mouths and leering stares, stand in such stark contrast to the brightly colored paintings of his earlier career that some art historians have questioned whether Goya in fact painted the series.\n\nHis earlier portrayals of terror and violence, pale in comparison to the Black Paintings. Not only because Goya proceeded his time by exploring the human psyche, but because he did not intend for the images to be made public.\n\nFollowing his death, the paintings were removed from the walls and may be seen today in the Prado Museum in Madrid. Even in the sanitized halls of the Prado, the monochromatic Black Paintings leave viewers unnerved. Here you go a quick brief of Goya’s black paintings\n\n",
+      "tags": [
+        "Animals",
+        "Oil"
+      ],
+      "id": 10
+    },
+    {
+      "title": "Art Movement: Cubism.\nThe Radicality of Fragmentation",
+      "author": "The Artist Editorial",
+      "date": "04.08.2020",
+      "img": "https://media.tate.org.uk/art/images/work/T/T00/T00414_10.jpg",
+      "imgAuthor": "https://www.theartist.me/wp-content/uploads/2022/03/theartist.melogo.jpg",
+      "blogCategory": "cubism",
+      "article": "TCubism is one of the most influential art styles of the twentieth century, which radically broke away from the long-standing tendency in art to attempt to create the illusion of a real three-dimensional space from a fixed viewpoint on the two-dimensional canvas. Cubist artists and cubism art, in fact, emphasized the two-dimensional nature of the canvas instead of creating the illusion of depth. They achieved this by not using perspective and using tone (light and shadow) in a different way. By breaking down objects into different planes, the artists showed different points of view at the same time, in the same space, as such suggesting their three-dimensional form while also pointing to the two-dimensional flatness of the canvas.\n\nIn 1908, the French art critic Louis Vauxcelles coined the term Cubism after seeing Georges Braque’s landscapes, which he had painted in emulation of Paul Cézanne. Vauxcelles identified the geometric forms in the highly abstracted works as “cubes”. Cézanne, who was already painting things from slightly different points of view, is without a doubt seen as the forerunner of Cubism, but artists also took a great deal of inspiration from other sources, such as African primitive art and other non-Western sources. Picasso was particularly inspired by the highly stylised, non-naturalistic African tribal masks. In his words: “A head is a matter of eyes, nose, mouth, which can be distributed in any way you like.”\nIn 1907 Paris, Pablo Picasso and Georges Braque met when Braque visited Picasso at his studio. This meeting marked the beginning of a very important friendship in the history of art. Together, the two artists developed Cubism art, a revolutionary new style of painting, which transformed the world into geometric shapes. Braque would later say about his friendship and working relationship with Picasso: “The things that Picasso and I said to one another during those years will never be said again, and even if they were, no one would understand them anymore. It was like being roped together on a mountain”.Cubism developed in two distinct phases: analytical cubism and (later) synthetic cubism. Analytical cubism art is considered to run from 1908-1912. The artworks look severe, and are made up of an interweaving of planes and lines in muted tones of blacks, greys and ochres. This simplified palette was chosen so as not to distract the viewer from the structure of the form and the density of the image at the centre of the canvas.",
+      "tags": [
+        "Object",
+        "Acrylic"
+      ],
+      "id": 11
+    },
+    {
+      "title": "5 Characteristics of Renaissance Art That Changed the World Forever",
+      "author": "The Artist Editorial",
+      "date": "21.01.2022",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Van_Eyck_-_Arnolfini_Portrait.jpg/748px-Van_Eyck_-_Arnolfini_Portrait.jpg",
+      "imgAuthor": "https://www.theartist.me/wp-content/uploads/2022/03/theartist.melogo.jpg",
+      "blogCategory": "modernism",
+      "article": "The word Renaissance means “rebirth”. Following the Dark and Middle ages and their associated turmoil and stagnation, not to mention the Black Death, Europe experienced a rebirth of sorts with a rediscovery of math, philosophy, astrology, astronomy, science, and literature and art witnessed a great revival within the 200 years, i.e., from 1400 to 1600.\nWith the advent of the printing press, knowledge was for the first time in over 1000 years accessible to people outside of the clergy, the noble, the aristocratic, and the royal.\n\nRenaissance brought about several changes. And these are changes that are still influencing the modern world, even up till presently. But germane among its effect was the fact that at the time, it ushered the world into a phase of heightened spiritual thinking. A phase where people began to explore the philosophy of humanism.\n\nSpecial attention was given to the classical eras in Greece and in Rome, which until the Renaissance were the pinnacle of human achievement.Renaissance was a period of greater learning and curiosity that led many learners and artists to develop and engage in new forms of art.\n\nRenaissance brought about several changes. And these are changes that are still influencing the modern world, even up till presently. But germane among its effect was the fact that at the time, it ushered the world into a phase of heightened spiritual thinking. A phase where people began to explore the philosophy of humanism.\n\nFlorence, Italy was the birthplace of the Renaissance and that is the reason why many disciplines focused mainly on Italy.The power of humanists during the Renaissance period was dominating and thus the church sought to become “patron” of the artists’ projects.The creative ventures involving the church and the artists shot up due to the high education sponsored by the church and the wealthy merchants spending huge amounts of money on the paintings.\nRenaissance art was instrumental in the change that the world experienced. Below are five of the characteristics of Renaissance Art that had a major influence on the world. The principles of Renaissance art have no doubt, contributed immensely to the state of the world today. It taught us principles and ideals which have remained relevant, through and true.\n\nAnd have transcended generations, while still strongly influencing our lifestyle and patterns in today’s world.\n\n",
+      "tags": [
+        "Portrait",
+        "Enamel"
+      ],
+      "id": 12
+    },
+    {
+      "title": "The Difference Between Modern and Contemporary Art",
+      "author": "The Artist Editorial",
+      "date": "01.02.2022",
+      "img": "https://images.squarespace-cdn.com/content/v1/5563cc47e4b07a2428f77052/1600807822906-F1ON6Y8UZN374MRZ8UMV/IMG_0752.JPG?format=1000w",
+      "imgAuthor": "https://www.theartist.me/wp-content/uploads/2022/03/theartist.melogo.jpg",
+      "blogCategory": "abstract",
+      "article": "Modern Art v/s Contemporary Art – Key Differences at A Snapshot\n\nModern art refers to art that began in the 1880s. Contemporary art describes the works of artists still living and creating artworks.\nModern Art is revolutionary by its origin (anti-romanticism), while Contemporary art is revolutionary for the freedom and magnitude of experimentation by the artists\nModern Art is more self-expressive, while Contemporary Art pays attention to society, thus known for its social impact\nModern Art is primarily made on canvases, while Contemporary Art is on every medium that you can think of – video art, tech-enabled artworks, object design, graphical arts\nModern art focuses on the subjective representation of the chosen themes, while Contemporary Art takes a strong stand on social, political and cultural aspects of the world\nA story to be told to explain the difference between modern and contemporary art, so let’s understand this in a bit more detail\n\nThe invention of art photography and film cameras then provided artists with new ways for the world illustrations and sceneries in their works.\n\nModern Art is used to conveying the era of ‘Modernism’, a time where art is described with various terms ending with ‘ism’s’ such as; Fauvism, Impressionism, Post-Impressionism, Dadaism, Cubism, Surrealism, Expressionism, Pop Art, and many other art movements.\n\nAll of it formed the foundation of Modernism Art. These art movements were influenced by a number of factors like; African and Asian Art, Light, Culture, History, etc.\n\nSome of the most well-known ‘Modernist Masters’ include; Pablo Picasso, Vincent Van Gogh, Georges Seurat, Paul Cézanne, Andre Derain, Henri Matisse, Henri de Toulouse, Piet Mondrian, Raoul Dufy, Maurice de Vlaminck, Pierre-Auguste Renoir, Wassily Kandinsky, and Édouard Manet just to name a few.\n\nThe era of Contemporary works of art produced experimental works that affect a wider range of social, economic, and political issues.\n\nThis idea reflected the issues that affect the world today, which are in the form of racism, globalization, oppression, poverty, feminism among many others. Over the last 30 years, we have witnessed a growing list of artworks that bring about awareness of the most important and urgent matters. They were all highlighted by video art, salons, object designs, graphical arts, and social media.For one who will love to explore both modern and contemporary art, there are many places in the world to see and experience it all. Take, for example, New York, which is one of the largest cities in the USA, is home to some of the richest museums with countless breathtaking works.",
+      "tags": [
+        "Object",
+        "Gouache"
+      ],
+      "id": 13
+    },
+    {
+      "title": "Performance Art: Top 3 Artists, from Early Pioneers to Contemporary Frontliners",
+      "author": "Anthony Dexter Giannelli",
+      "date": "26.02.2021",
+      "img": "https://walker-col.imgix.net/wac_14239.tif?fm=jpg&w=1440&h=1050&fit=max&dpr=1.5",
+      "imgAuthor": "https://photos.angel.co/users/6018150-medium_jpg?1490810807",
+      "blogCategory": "photorealism",
+      "article": "\nArguably the oldest form of creative expression in human history, performance art in its modern form is a relatively new addition to the world of western fine arts and its path has been winding for within the context of modern and contemporary art history until its ultimate acceptance and now dominating status. From early developers of the form to current mold-breakers, we explore some of the top players in the continued evolution of this so very human form of expression.\n1. Adrian Piper\nAdrian Piper’s innovations through experimentations with the relationship between individual identity and societal perception have paved the way for performance artists’ use of self and identity to this day. Her reach extends well beyond performance, and without her influence, the world for artists working with conceptualism, feminism, and minimalism would be quite different today. Considering how society at large interacts with and perceives the individual, Piper forms her most notable works around the “gift” and intricacies of passing. Piper describes early in her career meeting with galleries who expected a white male due to her name and the resulting disappointment and confusion to then come face to face with a woman of color. She would address this through performance works, putting on the persona of a black presenting male in her works The Mythic Being or refusing to be shown in all-black shows which she referred to as ghettoing, even retiring from being black and rather identifying as a shade of grey to reflect her 1/8th black ancestry.\n\n2. Nick Cave\nCostuming and physical visual alteration has been an integral part of performance art throughout its history. Nick Cave has taken this aspect to new heights through his sound suits, which stand alone as ingenious sculptural marvels or come to life through mass dance spectacle. Originally conceived to hide outward signifiers of race, class, gender, etc the suits and resulting performance undoubtedly call to mind ancient and modern rituals. Through the merging of fashion, textile art, dance, and large scale, conceptual exhibiting Nick Cave is able to showcase the very essence of versatility and multidisciplinary qualities that are native to the craft of performance.\n\n3. Wu Tsang\nIdentity and performance are almost inseparable. Even when the performer’s physical body is taken away from the piece there is an undeniable personal touch and an immediate impression that shine brighter than in other disciplines. For Wu Tsang, expressing identity is shown in an unprecedented exploration outside of the binary to connect with in-betweenness by capturing aspects of otherness within LQBTQ culture that go far beyond mere visibility. Digging deeper past skin-deep confrontations of identity and appearance, Tsang seeks to embody the full social reality of existence for those who do not fit the dominant mold. Her works have highlighted communities that have been on one hand appropriated for cultural gain while having to live unsafely and villainized in everyday society. These range from migrant Latin queer communities in Los Angeles, exploring the history of the persecuted queer culture in China, and the black and brown ballroom culture of New York.",
+      "tags": [
+        "Portrait",
+        "Object"
+      ],
+      "id": 14
+    }
+  ],
+  "comments": [
+    {
+      "author": "Vika",
+      "email": "sdf@fg",
+      "text": "Comment for first article",
+      "articleId": 1,
+      "clicked": false,
+      "date": "2022-10-13T18:08:20.111Z",
+      "id": 1
+    },
+    {
+      "author": "Denys",
+      "email": "den@rt",
+      "text": "Reply to first comment",
+      "clicked": false,
+      "articleId": 1,
+      "parentId": 1,
+      "id": 2
+    },
+    {
+      "author": "Ben",
+      "email": "b@gh",
+      "text": "Second reply to first comment",
+      "clicked": false,
+      "articleId": 1,
+      "parentId": 1,
+      "id": 3
+    },
+    {
+      "author": "Nick",
+      "email": "fd@f",
+      "text": "Third reply to first comment",
+      "clicked": false,
+      "articleId": 1,
+      "parentId": 1,
+      "id": 4
+    },
+    {
+      "author": "Vika",
+      "email": "dfg@f",
+      "text": "Reply to reply",
+      "clicked": false,
+      "articleId": 1,
+      "parentId": 3,
+      "id": 5
+    },
+    {
+      "author": "Ben",
+      "email": "dfgh@vgh",
+      "text": "Reply to reply to reply",
+      "clicked": false,
+      "articleId": 1,
+      "parentId": 5,
+      "id": 6
+    },
+    {
+      "author": "Ben",
+      "email": "dfg@fg",
+      "text": "Second comment to firt article",
+      "articleId": 1,
+      "clicked": false,
+      "date": "2022-10-13T18:13:08.816Z",
+      "id": 7
+    },
+    {
+      "author": "Nick",
+      "email": "df@fg",
+      "text": "Reply to second comment",
+      "clicked": false,
+      "articleId": 1,
+      "parentId": 7,
+      "id": 8
+    },
+    {
+      "author": "Denys",
+      "email": "den@gm",
+      "text": "Good article!",
+      "articleId": 14,
+      "clicked": false,
+      "date": "2022-10-13T19:35:46.295Z",
+      "id": 9
+    },
+    {
+      "author": "Vika",
+      "email": "vika@gh",
+      "text": "Thank you!",
+      "clicked": false,
+      "articleId": 14,
+      "parentId": 9,
+      "id": 10
+    },
+    {
+      "author": "Denys",
+      "email": "den@gh",
+      "text": "You are welcome!",
+      "clicked": false,
+      "articleId": 14,
+      "parentId": 10,
+      "id": 11
+    },
+    {
+      "author": "Ben",
+      "email": "ben@fg",
+      "text": "Good!",
+      "articleId": 14,
+      "clicked": false,
+      "date": "2022-10-13T19:44:21.303Z",
+      "id": 12
+    },
+    {
+      "author": "Vika",
+      "email": "gjh@s",
+      "text": "Thanks",
+      "clicked": false,
+      "articleId": 14,
+      "parentId": 12,
+      "id": 13
+    },
+    {
+      "author": "Serg",
+      "email": "ser@hk",
+      "text": "Good!",
+      "articleId": 4,
+      "clicked": false,
+      "date": "2022-10-13T19:52:26.688Z",
+      "id": 14
+    },
+    {
+      "author": "Vika",
+      "email": "vu@gn",
+      "text": "Thanks!",
+      "clicked": false,
+      "articleId": 4,
+      "parentId": 14,
+      "id": 15
+    },
+    {
+      "author": "Vika",
+      "email": "vi@h",
+      "text": "First comment to second article",
+      "articleId": 2,
+      "clicked": false,
+      "date": "2022-10-14T07:36:30.448Z",
+      "id": 16
+    },
+    {
+      "author": "Ben",
+      "email": "df@f",
+      "text": "Reply to a comment",
+      "clicked": false,
+      "articleId": 2,
+      "parentId": 16,
+      "id": 17
+    },
+    {
+      "author": "Nick",
+      "email": "fg@f",
+      "text": "Reply to reply ",
+      "clicked": false,
+      "articleId": 2,
+      "parentId": 17,
+      "id": 18
+    },
+    {
+      "author": "Ben",
+      "email": "be@gk",
+      "text": "Comment",
+      "articleId": 2,
+      "clicked": false,
+      "date": "2022-10-15T13:42:15.482Z",
+      "id": 19
+    },
+    {
+      "author": "Vika",
+      "email": "gh@hj",
+      "text": "Reply",
+      "clicked": false,
+      "articleId": 2,
+      "parentId": 19,
+      "id": 20
+    },
+    {
+      "author": "Vika",
+      "email": "v@gh",
+      "text": "Reply 2 reply reply",
+      "clicked": false,
+      "articleId": 1,
+      "parentId": 5,
+      "id": 21
+    },
+    {
+      "author": "Vika",
+      "email": "fgh@f",
+      "text": "One more reply",
+      "clicked": false,
+      "articleId": 1,
+      "parentId": 6,
+      "id": 22
+    }
+  ]
+}

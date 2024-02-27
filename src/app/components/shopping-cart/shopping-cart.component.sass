@@ -1,0 +1,176 @@
+.shopping-cart
+  display: flex
+  background-color: #FFFFFF
+  padding-top: 15px
+  justify-content: space-between
+  padding-bottom: 15px
+
+.shopping-cart__form-info
+  width: 50%
+
+.shopping-cart__form-title
+  font-weight: 600
+  font-size: 22px
+  line-height: 33px
+
+.shopping-cart__form-title:not(:nth-child(2))
+  margin-top: 64px
+
+.shopping-cart__form-description
+  color: #A9A9A9
+  margin-top: 4px
+  display: flex
+  justify-content: space-between
+  margin-bottom: 32px
+
+.shopping-cart__form-group
+  display: flex
+  justify-content: space-between
+  margin-top: 32px
+
+.shopping-cart__form-control
+  margin-top: 10px
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  white-space: nowrap
+  overflow: hidden
+
+.shopping-cart__form-input
+  font-size: 14px
+  width: 262px
+  padding: 10px
+
+.shopping-cart__form-control-label
+  white-space: nowrap
+  overflow: hidden
+
+.shopping-cart__form-btn
+  padding: 12px 48px
+  margin-top: 32px
+
+.shopping-cart__form-btn:disabled
+  background: #A9A9A9
+  cursor: auto
+  border: none
+
+input.ng-valid,
+select.ng-valid
+  border: 1px solid #6A983C
+
+.credit-card-input
+  width: 100%
+  font-size: 14px
+  padding: 10px
+
+.credit-card-group
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 5px
+
+.credit-card-holder
+  width: 60%
+  margin-right: 32px
+
+.credit-card-date
+  width: 20%
+  margin-right: 16px
+
+.credit-card-cvc
+  width: 20%
+
+.shopping-cart__form-textarea
+  width: 100%
+  height: 110px
+  resize: none
+  font-family: inherit
+  font-size: 12px
+
+.shopping-cart__security-img
+  margin-top: 34px
+
+.shopping-cart__security-text
+  margin-top: 5px
+  display: inline-block
+  width: 215px
+  color: #A9A9A9
+
+@media (max-width: 1170px)
+  .shopping-cart__form-input
+    width: 100%
+
+  .shopping-cart__form-info
+    width: 55%
+
+  .paintings__painting-quantity
+    width: 40%
+
+@media (max-width: 925px)
+  .shopping-cart__form-info
+    width: 40%
+
+  .shopping-cart__form-input
+    width: 90%
+
+  .paintings-cart
+    width: 50%
+
+  .credit-card-holder
+    margin-right: 10px
+
+  .shopping-cart__additional-block
+    display: none
+
+
+@media (max-width: 760px)
+  .shopping-cart__form-info
+    width: 40%
+
+  .paintings-cart
+    width: 55%
+
+  .shopping-cart__form-group
+    display: block
+
+  .shopping-cart__form-input
+    width: 100%
+
+@media (max-width: 650px)
+  .paintings__title
+    font-size: 18px
+    line-height: 27px
+
+  .paintings__description,
+  .paintings__total-delivery
+    font-size: 10px
+    line-height: 12px
+
+  .paintings__painting-sum-quantity
+    display: block
+
+  .checkbox-ship
+    width: 100%
+
+  .paintings__total-price
+    font-size: 18px
+    line-height: 22px
+    text-align: center
+
+  .checkbox-agree-emails,
+  .checkbox-agree-policy,
+  .credit-card-input
+    font-size: 12px
+    line-height: 15px
+    width: 100%
+
+  .shopping-cart__form-description
+    font-size: 10px
+
+  .shopping-cart__buy-method
+    width: 90%
+
+  .shopping-cart__buy-method-company
+    display: none
+
+

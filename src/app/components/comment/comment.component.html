@@ -1,0 +1,88 @@
+<div *ngIf="comment">
+  <ul class="list">
+    <li class="list-item">
+      <div class="comment">
+        <div class="comment__info">
+          <img class="comment__img"
+               src="/assets/images/user.png"
+               alt="User image">
+          <div class="comment__author-date">
+            <p class="font-title-small">
+              {{comment.author}}
+            </p>
+            <span class="font-text comment__data">
+                    13.10.2022
+                  </span>
+          </div>
+        </div>
+        <div class="comment__text">
+          <p class="font-text-large">
+            {{comment.text}}
+          </p>
+          <button class="font-title-small comment__reply-btn" *ngIf="!comment.clicked"
+                  (click)="comment.clicked = true">Reply
+          </button>
+        </div>
+        <div class="comment__form-reply" *ngIf="comment.clicked">
+          <form [formGroup]="formReply" (ngSubmit)="reply(comment)">
+            <div class="comment__controls">
+              <div class="comment__control-wrapper">
+                <div class="comment__form-control">
+                  <label class="font-title-small">Name</label>
+                  <input class="input comment__form-input" formControlName="author" type="text"
+                         placeholder="Name">
+                </div>
+                <div class="validation" *ngIf="formReply.get('author')?.invalid && formReply.get('author')?.touched">
+                  <small *ngIf="formReply.get('author')?.errors?.['required']">
+                    Please enter info
+                  </small>
+                  <small *ngIf="formReply.get('author')?.errors?.['minlength']">
+                    Too short
+                  </small>
+                  <small *ngIf="formReply.get('author')?.errors?.['maxlength']">
+                    Too long
+                  </small>
+                </div>
+              </div>
+              <div class="comment__control-wrapper">
+                <div class="comment__form-control">
+                  <label class="font-title-small">Email address</label>
+                  <input class="input comment__form-input" formControlName="email" type="email"
+                         placeholder="Email address">
+                </div>
+                <div class="validation"
+                     *ngIf="formReply.get('email')?.invalid && formReply.get('email')?.touched">
+                  <small *ngIf="formReply.get('email')?.errors?.['required']">Please enter info</small>
+                  <small *ngIf="formReply.get('email')?.errors?.['email']">Please enter a correct email</small>
+                </div>
+              </div>
+            </div>
+            <div class="comment__form-control">
+              <label class="font-title-small">Comment</label>
+              <textarea class="input comment__form-input comment__form-textarea" formControlName="text"
+                        type="text"
+                        placeholder="Space for your comments"> </textarea>
+            </div>
+            <div class="validation" *ngIf="formReply.get('text')?.invalid && formReply.get('text')?.touched">
+              <small *ngIf="formReply.get('text')?.errors?.['required']">
+                Please enter info
+              </small>
+              <small *ngIf="formReply.get('text')?.errors?.['maxlength']">
+                Max length is 1000 characters
+              </small>
+            </div>
+            <div class="comment__form-buttons">
+              <button class="font-title-small comment__form-btn" type="submit" [disabled]="formReply.invalid">Send
+                reply
+              </button>
+              <button class="font-title-small comment__form-btn" (click)="comment.clicked = false">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="children" *ngFor="let children of articleCommentsChildren$ | async">
+        <app-comment [comment]="children"></app-comment>
+      </div>
+    </li>
+  </ul>
+</div>

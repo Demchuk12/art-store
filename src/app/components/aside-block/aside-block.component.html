@@ -1,0 +1,40 @@
+<div class="aside">
+  <div *ngIf="loading | async" class="spinner-wrapper">
+    <div class="spinner">
+    </div>
+    <p class="spinner-text">
+      Categories loading... Please wait
+    </p>
+  </div>
+  <div *ngIf="loaded | async">
+    <div *ngIf="lessCategories else moreCategories">
+      <ul class="list aside__list">
+        <li *ngFor='let categoriesSidebar of categoriesSideBar$ | async' class="font-text-large list-item">
+          <a data-cy="categories-sidebar-link" class="list-link" routerLinkActive="active"
+             routerLink="{{categoriesSidebar.path}}">
+            {{categoriesSidebar.category}}
+          </a>
+        </li>
+      </ul>
+      <button data-cy="more-btn" (click)="toggleCategories()" class="aside__button button" type="button">
+        More categories
+        <img src="/assets/images/aside-block-arrow.svg" alt="Aside block arrow">
+      </button>
+    </div>
+    <ng-template #moreCategories>
+      <ul class="list aside__list">
+        <li *ngFor='let category of categories$ | async' class="font-text-large list-item">
+          <a class="list-link" routerLinkActive="active" routerLink="{{category.path}}">
+            {{category.category}}
+          </a>
+        </li>
+      </ul>
+      <button data-cy="less-btn" (click)="toggleCategories()" class="aside__button button" type="button">
+        Less categories
+        <img src="/assets/images/aside-block-arrow.svg" alt="Aside block arrow">
+      </button>
+    </ng-template>
+  </div>
+</div>
+
+

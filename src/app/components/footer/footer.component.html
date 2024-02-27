@@ -1,0 +1,93 @@
+<footer class="footer container font-text-large">
+  <div class="footer__columns">
+    <div class="footer__column">
+      <p class="font-title footer__title">
+        Get in touch
+      </p>
+      <ul class="list">
+        <li class="list-item">
+          <a class="list-link footer__list-link" routerLink="/about-us">About Us</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link footer__list-link" routerLink="/careers">Careers</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link footer__list-link" href="#">Press Releases</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link footer__list-link" href="#">Blog</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__column">
+      <p class="font-title footer__title">
+        Connections
+      </p>
+      <ul class="list">
+        <li class="list-item">
+          <a class="list-link footer__list-link" href="#">Facebook</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link footer__list-link" href="#">Twitter</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link footer__list-link" href="#">Instagram</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link footer__list-link" href="#">Youtube</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link footer__list-link" href="#">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__column">
+      <p class="font-title footer__title">
+        Earnings
+      </p>
+      <ul class="list">
+        <li class="list-item">
+          <a class="list-link footer__list-link" href="#">Become an Affiliate</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link footer__list-link" href="#">Advertise your product</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link footer__list-link" href="#">Sell on Market</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__column">
+      <p class="font-title footer__title">
+        Account
+      </p>
+      <ul class="list">
+        <li class="list-item">
+          <a class="list-link footer__list-link" href="#">Your account</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link footer__list-link" href="#">Returns Centre</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link footer__list-link" href="#">100 % purchase protection</a>
+        </li>
+        <li class="ist-item">
+          <a class="list-link footer__list-link" href="#">Chat with us</a>
+        </li>
+        <li class="list-item">
+          <a class="list-link footer__list-link" href="#">Help</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__product-tags">
+    <p class="font-title footer__title">
+      Painting tags
+    </p>
+    <div class="footer__tags font-title-small">
+      <span *ngFor="let tag of tags" class="tag-grey footer__tag">
+        {{tag}}
+      </span>
+    </div>
+  </div>
+</footer>

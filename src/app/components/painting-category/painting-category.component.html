@@ -1,0 +1,29 @@
+<div class="main">
+  <div *ngIf="painting" class="main__painting main__painting-category">
+    <div class="main__painting-content">
+      <img class="main__painting-img" src="{{painting.img}}" alt="Painting image">
+      <p class="font-subtitle main__painting-title">
+        {{painting.name | titlecase}}
+      </p>
+      <span class="font-text main__painting-description">
+      <b>Artist: </b> {{painting.author}} ,
+      <b>Estimated date:</b> {{painting.year}}
+    </span>
+    </div>
+    <div class="main__painting-purchase">
+    <span class="font-title">
+        {{painting.price}} USD
+    </span>
+      <button data-cy="buy-btn" class="button button-green main__painting-button" type="button" *ngIf="!painting.inCart"
+              (click)="addToCart(painting)">
+        Buy now
+      </button>
+      <button data-cy="already-in-cart-btn" class="button button-green main__painting-button" *ngIf="painting.inCart">
+        Already in cart
+      </button>
+    </div>
+    <a data-cy="more-information-link" class="main__painting-link" [routerLink]="['', painting.category,painting.id]">
+      More information
+    </a>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div *ngIf="article" class="article">
+  <img class="article__img" src="{{article.img}}" alt="Painting image">
+  <div class="article__tag-read">
+    <span class="font-title-small tag-green">
+      {{article.tags[0]}}
+    </span>
+    <a class="font-title-small article__read-btn" [routerLink]="['', 'blog-page', article.blogCategory, article.id]">Read
+      more</a>
+  </div>
+  <p class="font-subtitle article__title">
+    {{article.title}}
+  </p>
+  <div class="font-text article__description">
+    <span class="article__author">{{article.author}}</span>
+    <span>{{article.date}}</span>
+  </div>
+</div>

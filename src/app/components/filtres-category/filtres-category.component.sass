@@ -1,0 +1,81 @@
+.filters__buttons,
+.filters__button-radio,
+.filters__button-checkbox
+  display: flex
+  align-items: center
+
+.filters__buttons-radio,
+.filters__buttons-checkbox,
+.filters__buttons-checkbox-select
+  background: #F9F9F9
+  border: 1px solid #D1D1D1
+  border-radius: 12px
+  padding: 9px 16px
+  display: flex
+  align-items: center
+
+.filters__button-radio:not(:last-child)
+  margin-right: 16px
+
+.filters__buttons-checkbox
+  margin-left: 16px
+
+.filters__buttons-checkbox-btn
+  background: none
+  border: 1px solid #EBEBEB
+  border-radius: 12px
+  padding: 0 8px
+  margin-left: 8px
+
+.filters__buttons-checkbox-select
+  display: flex
+  align-items: center
+  margin-left: 16px
+  width: 220px
+  justify-content: space-between
+
+.filters__buttons-select
+  appearance: none
+  background-image: url('/assets/images/arrow-good.svg')
+  background-repeat: no-repeat
+  background-position: right .4em top 50%, 0 0
+  width: 30%
+  border: none
+  background-color: #F9F9F9
+  outline: none
+
+
+@media (max-width: 810px)
+  .filters__buttons-radio,
+  .filters__buttons-checkbox,
+  .filters__buttons-checkbox-select
+    font-size: 12px
+    line-height: 15px
+
+@media (max-width: 770px)
+  .filters__buttons-radio
+    padding: 9px 10px
+
+  .filters__buttons-checkbox-select
+    width: 200px
+
+  .filters__buttons-select
+    width: 40%
+
+  .buttons-radio-input + label::before
+    height: 1em
+    width: 1em
+
+  .filters__buttons-checkbox-btn
+    font-size: 10px
+    line-height: 15px
+
+@media (max-width: 730px)
+  .filters__buttons-radio
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  .filters__button-radio:first-child
+    margin-bottom: 10px
+    margin-right: 0

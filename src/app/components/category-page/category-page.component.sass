@@ -1,0 +1,58 @@
+.category-header__group,
+.category-header__buttons
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.category-header__group
+  margin-bottom: 20px
+
+.category-header__btn
+  border: none
+  background: none
+  cursor: pointer
+  margin-right: 4px
+
+.category-header__btn-container
+  display: flex
+  align-items: center
+  margin-right: 24px
+  color: #A9A9A9
+
+.category-header__btn-container,
+.category-header__text
+  color: #A9A9A9
+
+.category-header__products
+  display: flex
+  align-items: center
+
+.category-header__products-quantity
+  margin-right: 4px
+
+.category
+  width: 100%
+
+.active
+  color: #151515
+
+.active__icon
+  filter: grayscale(500%) brightness(50%) sepia(200%) saturate(900%) hue-rotate(50deg)
+
+@media (max-width: 910px)
+  app-aside-block-category
+    display: none
+
+
+@media (max-width: 665px)
+  app-filtres-category
+    display: none
+
+  .category-header__group
+    margin-bottom: 0
+
+  .category-header__title
+    font-size: 22px
+    line-height: 30px
+
+

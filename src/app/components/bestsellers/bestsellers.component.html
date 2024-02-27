@@ -1,0 +1,13 @@
+<div *ngIf="loading | async" class="spinner-wrapper">
+  <div class="spinner">
+  </div>
+  <p class="spinner-text">
+    Bestsellers loading... Please wait
+  </p>
+</div>
+<div *ngIf="loaded | async" class="content bestsellers">
+  <app-painting
+    *ngFor="let painting of paintings$ | async"
+    [painting]="painting">
+  </app-painting>
+</div>
