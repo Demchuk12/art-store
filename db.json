@@ -619,6 +619,14 @@
       "comment": "",
       "paintingId": 1,
       "id": "oh_wa0s"
+    },
+    {
+      "name": "Name",
+      "email": "vasyldemchuk1@gmail.com",
+      "score": "5 — Excellent",
+      "comment": "123123123",
+      "paintingId": 17,
+      "id": "6FZu2rk"
     }
   ],
   "basket": [
@@ -647,6 +655,50 @@
       "inCart": true,
       "category": "expressionism",
       "id": 5,
+      "quantity": 1
+    },
+    {
+      "img": "https://cdn.thecollector.com/wp-content/uploads/2020/05/wassily_kandinsky_the_blue_rider_1903.jpg?width=1400&quality=55",
+      "name": "The Blue Rider",
+      "author": "Wassily Kandinsky",
+      "year": 1903,
+      "price": 62,
+      "inCart": true,
+      "category": "expressionism",
+      "id": 15,
+      "quantity": 1
+    },
+    {
+      "img": "https://cdn.thecollector.com/wp-content/uploads/2020/05/erich_heckel_portrait_of_a_man_1919-839x1024.jpg?width=1400&quality=55",
+      "name": "Portrait of a Man",
+      "author": "Erich Heckel",
+      "year": 1919,
+      "price": 52,
+      "inCart": true,
+      "category": "expressionism",
+      "id": 16,
+      "quantity": 1
+    },
+    {
+      "img": "https://cdn.thecollector.com/wp-content/uploads/2020/05/ernst_ludwig_kirchner_street_berlin_1913-774x1024.jpg?width=1200&quality=55",
+      "name": "Street, Berlin",
+      "author": "Ernst Ludwig Kirchner",
+      "year": 1913,
+      "price": 43,
+      "inCart": true,
+      "category": "expressionism",
+      "id": 17,
+      "quantity": 1
+    },
+    {
+      "img": "https://ik.imagekit.io/theartling/prod/original_images/19487.jpg?tr=c-at_max,bg-FFFFFF,w-1650",
+      "name": "Abstract Painting 599",
+      "author": "Gerhard Richter",
+      "year": 1986,
+      "price": 10,
+      "inCart": true,
+      "category": "abstract",
+      "id": 22,
       "quantity": 1
     }
   ],

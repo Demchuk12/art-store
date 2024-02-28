@@ -3,16 +3,17 @@ import {HttpClient} from '@angular/common/http';
 import {catchError, Observable, throwError} from 'rxjs';
 import {Article, Comment} from '../models/article.model';
 import {map} from 'rxjs/operators';
-
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class BlogService {
+  apiUrl: string = environment.apiURL;
   constructor(private http: HttpClient) {
   }
 
   getArticles(): Observable<Article[]> {
-    return this.http.get<Article[]>(' http://localhost:3000/articles\n')
+    return this.http.get<Article[]>(this.apiUrl + 'articles\n')
       .pipe(
         catchError(error => {
           console.log('Error: ' + error.message);
@@ -22,7 +23,7 @@ export class BlogService {
   }
 
   getArticlesByCategory(blogCategory: string): Observable<Article[]> {
-    return this.http.get<Article[]>(' http://localhost:3000/articles\n')
+    return this.http.get<Article[]>(this.apiUrl + 'articles\n')
       .pipe(
         map(articles => articles.filter(article => article.blogCategory === blogCategory)),
         catchError(error => {
@@ -33,7 +34,7 @@ export class BlogService {
   }
 
   getArticleById(articleId: string): Observable<Article> {
-    return this.http.get<Article>(`http://localhost:3000/articles/${+articleId}\n`)
+    return this.http.get<Article>(this.apiUrl + `articles/${+articleId}\n`)
       .pipe(
         catchError(error => {
           console.log('Error: ' + error.message);
@@ -43,7 +44,7 @@ export class BlogService {
   }
 
   getArticleComments(articleId: number): Observable<Comment[]> {
-    return this.http.get<Comment[]>(' http://localhost:3000/comments\n')
+    return this.http.get<Comment[]>(this.apiUrl + 'comments\n')
       .pipe(
         map(articles => articles.filter(article => article.articleId === articleId)),
         catchError(error => {
@@ -54,6 +55,6 @@ export class BlogService {
   }
 
   setComment(comment: Comment): Observable<Comment> {
-    return this.http.post<Comment>(' http://localhost:3000/comments\n', comment);
+    return this.http.post<Comment>(this.apiUrl + 'comments\n', comment);
   }
 }
